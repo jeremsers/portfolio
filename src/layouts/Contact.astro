@@ -1,0 +1,93 @@
+---
+
+---
+
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <form class="contact-form">
+    <div class="contact-form--info">
+      <div>
+        <label for="nom">Nom</label>
+        <input id="nom" name="nom" />
+      </div>
+    </div>
+    <div>
+      <label for="mail">mail</label>
+
+      <input id="mail" name="mail" />
+    </div>
+  </form>
+  <div>
+    <label for="tel">tel</label>
+
+    <input id="tel" name="tel" />
+  </div>
+</section>
+<button>submit</button>
+
+<div class="contact-form--text">
+  <label for="message">Message</label>
+  <textarea id="message" name="message"></textarea>
+</div>
+
+<style>
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    background-color: white;
+    /* background-image: url("../assets/contactbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+    border-top: 2px solid grey;
+  }
+  .contact h2 {
+    padding-top: 15px;
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 90%;
+    background-color: #43d590;
+    width: 60%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+  }
+  .contact-form--info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 30px;
+    align-items: center;
+  }
+  .contact-form--info button {
+    width: 40%;
+  }
+  .contact-form--info div {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form--info div input {
+    border-radius: 5px;
+    border-style: none;
+  }
+  .contact-form--text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    justify-content: center;
+  }
+  .contact-form--text textarea {
+    height: 100%;
+    border-radius: 10px;
+  }
+</style>

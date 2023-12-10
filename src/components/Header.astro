@@ -1,0 +1,71 @@
+---
+const { head } = Astro.props;
+---
+
+<div class="header-container">
+  <header class="header">
+    <div class="logo">
+      <a href="./#project">{head}</a>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="./#project">Mes projets</a>
+        </li>
+        <li>
+          <a href="./#bio">Bio</a>
+        </li>
+        <li>
+          <a href="./#contact">contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+<style>
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b262c;
+    box-shadow:
+      0px 10px 13px -7px #000000,
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+    height: 9vh;
+    width: 100vw;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    opacity: 0.7;
+  }
+  .header-container {
+    height: 9vh;
+    background-color: rgb(56, 56, 56);
+    border-bottom: 2px solid grey;
+  }
+
+  .logo {
+    margin-left: 30px;
+  }
+  .logo a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    margin-right: 50px;
+  }
+  .navbar ul li {
+    list-style: none;
+  }
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+</style>

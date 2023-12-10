@@ -1,0 +1,45 @@
+---
+import LayoutProjet from "../layouts/LayoutProjet.astro";
+import json from "../data/data.json";
+console.log(json);
+import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
+---
+
+<LayoutProjet title="Projets">
+  <main>
+    <h1>Projets</h1>
+    <div class="container">
+      {
+        json.map((projet) => (
+          <Card
+            title={projet.titre}
+            desc={projet.description}
+            img={projet.image}
+          />
+        ))
+      }
+    </div>
+  </main>
+  <Footer />
+</LayoutProjet>
+
+<style>
+  main {
+    min-height: 90vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 25px;
+  }
+
+  .container {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 10vw;
+    row-gap: 5vh;
+  }
+</style>

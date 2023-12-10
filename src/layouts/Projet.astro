@@ -1,0 +1,84 @@
+---
+import Card from "../components/Card.astro";
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("projet");
+---
+
+<section class="project" id="project">
+  <h2>Mes projets</h2>
+  <div class="project-container">
+    {
+      allPosts.map((post) => (
+        <Card
+          url={`/${post.slug}/`}
+          title={post.data.name}
+          desc={post.data.description}
+          img={post.data.img}
+        />
+      ))
+    }
+
+    <article class="other">
+      <a class="link" href="/projets"></a>
+      <img class="animate5" src="../src/assets/plus.png" alt="projet" />
+    </article>
+  </div>
+</section>
+
+<style>
+  .project {
+    display: flex;
+    flex-direction: column;
+    /* background-image: url("../assets/projectbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+    border-top: 2px solid grey;
+    min-height: 100vh;
+    padding: 50px 50px;
+    background-color: white;
+    align-items: center;
+    color: #1b262c;
+  }
+  .project h2 {
+    padding-bottom: 30px;
+    font-size: 48px;
+    border-bottom: 2px solid grey;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .project-container {
+    width: fit-content;
+    display: grid;
+    width: 90vw;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 10vw;
+    row-gap: 5vh;
+    align-items: center;
+    justify-items: center;
+  }
+  .other {
+    position: relative;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    aspect-ratio: 1;
+    width: 100px;
+    border: 1px solid black;
+    box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.99);
+  }
+
+  .other img {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px 10px 0 0;
+  }
+  .other a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+</style>
