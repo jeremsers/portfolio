@@ -11,6 +11,19 @@ const projetCollection = defineCollection({
   }),
 });
 
+const projectlistCollection = defineCollection({
+    schema: ({ image }) => z.object ({
+        titre: z.string(),
+        image: image().refine((img) => img.width >= 0, {
+            message: "Cover image must be at least 300 pixels wide!",
+          }),
+          description: z.string()
+
+    })
+
+})
+
 export const collections = {
   projet: projetCollection,
+  projectlist: projectlistCollection
 };

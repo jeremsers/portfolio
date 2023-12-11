@@ -2,6 +2,8 @@
 import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("projet");
+import plus from '../assets/plus.png'
+import { Image } from "astro:assets";
 
 ---
 
@@ -22,7 +24,7 @@ const allPosts = await getCollection("projet");
 
     <article class="other">
       <a class="link" href="/projets"></a>
-      <img class="animate5" src="../src/assets/plus.png" alt="projet" />
+      <Image class="animate5" src={plus} alt="projet" />
     </article>
   </div>
 </section>

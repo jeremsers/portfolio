@@ -4,6 +4,8 @@ import json from "../data/data.json";
 console.log(json);
 import Footer from "../components/Footer.astro";
 import Card from "../components/Card.astro";
+import { getCollection } from "astro:content";
+const allproj = await getCollection('projectlist')
 ---
 
 <LayoutProjet title="Projets">
@@ -11,12 +13,12 @@ import Card from "../components/Card.astro";
     <h1>Projets</h1>
     <div class="container">
       {
-        json.map((projet) => (
+        allproj.map((projet) => (
           <Card
-            title={projet.titre}
-            desc={projet.description}
-            img={projet.image}
-            balise='b'
+            title={projet.data.titre}
+            desc={projet.data.description}
+            img={projet.data.image}
+            balise='a'
           />
         ))
       }
