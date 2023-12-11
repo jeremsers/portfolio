@@ -1,0 +1,86 @@
+---
+import TimelineOdd from "../components/Timeline/TimelineOdd.astro";
+import TimelinePair from '../components/Timeline/TimelinePair.astro'
+
+---
+
+<section class="design-section">
+  <h2>Mon parcours</h2>
+  
+  <div class="timeline">
+    <TimelineOdd  title="Formation Integrateur web" content="Openclassroom"/>
+    <TimelinePair title="Formation Deep learning" content="Coursera"/>
+    <TimelineOdd  title="Formation Machine learning" content="Coursera"/>
+    <TimelinePair title="Formation Data scientist" content="Datacamp"/>
+    <TimelineOdd  title="M2 Droit prive" content="Université Toulouse I capitole"/>
+  </div>
+</section>
+
+<style>
+  .design-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    min-height: 60vh;
+    border-top: 1px solid grey;
+  }
+
+  .design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    padding-block: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    background: #43d590;
+    color: white;
+    padding: 5px;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+    margin: 20px 10px;
+    border-radius: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 3px 1fr;
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #ecda3c;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    .timeline-middle {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ecda3c;
+      width: 3px;
+      height: 100%;
+    }
+  }
+</style>
