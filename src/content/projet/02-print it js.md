@@ -1,8 +1,9 @@
 ---
-name: Print it js
+title: Print it js
 tags: [Html, css, javascript, animation]
 description: Site vitrine avec réalisation d'animation grace a css et js
-img: printit.png
+img: './printit.png'
+imgAlt: 'printitjs'
 ---
 
 # Print it js

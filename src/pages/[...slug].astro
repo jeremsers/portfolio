@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import LayoutProjet from "../layouts/LayoutProjet.astro";
 
@@ -14,12 +15,13 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<LayoutProjet title={entry.data.name} frontmatter={entry.data}>
+<LayoutProjet title={entry.data.title} frontmatter={entry.data}>
   <div class="pagecontainer">
     <section class="projectpage">
-      <img
-        transition:name=`animate-${entry.data.name}`
-        src=`../src/assets/${entry.data.img}`
+      <Image
+        transition:name=`animate-${entry.data.title}`
+        src={entry.data.img}
+        alt={entry.data.title}
       />
       <article>
         <Content />

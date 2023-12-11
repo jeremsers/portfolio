@@ -1,22 +1,35 @@
 ---
-const { url, title, desc, img } = Astro.props;
+const { url, title, desc, img, balise } = Astro.props;
+import { Image } from "astro:assets";
+
 ---
 
 <article class="project-card">
   <a class="link" href={url}></a>
   <div class="darken"></div>
-  <img
+  {(balise=='a') && 
+  <Image
     transition:name=`animate-${title}`
-    src=`../src/assets/${img}`
+    src={img}
     alt=`projet ${title} `
-  />
-</article>
+    quality={70}
+    densities={[1.5,2]}
+    format="avif"
+    
+  /> }
+ {(balise=='b') && 
+ <img 
+ transition:name=`animate-${title}`
+  src=`../src/assets/${img}`
+  alt=`projet ${title} `>
+}
 
 <div class="project-card--text">
   <h3>{title}</h3>
   <p>{desc}</p>
-</div>
-
+  </div>
+  </article>
+  
 <style>
   .darken {
     background-color: rgba(0, 0, 0, 0.5);

@@ -1,11 +1,12 @@
 --- 
-name: Sophie Buel - Architecte d'intérieur  
+title: Sophie Buel - Architecte d'intérieur  
 tags : [Html,css,js]
 description: Site vitrine avec gestion de login et operations CRUD grace a js
-img: sbuel.png
+img: './sbuel.png'
+imgAlt: 'printitjs'
 ---
 
-# Sophie buel
+
 
 Pour la réalisation de ce site vitrine, jái eu acces en plus de la maquette a une premiere version du site sur laquelle manquait les fonctionnalites a implementer pour le projet. Ainsi le projet etait bien plus centre sur la prise en main de javascript.
 

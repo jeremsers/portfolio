@@ -2,6 +2,7 @@
 import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("projet");
+
 ---
 
 <section class="project" id="project">
@@ -11,9 +12,10 @@ const allPosts = await getCollection("projet");
       allPosts.map((post) => (
         <Card
           url={`/${post.slug}/`}
-          title={post.data.name}
+          title={post.data.title}
           desc={post.data.description}
           img={post.data.img}
+          balise='a'
         />
       ))
     }
