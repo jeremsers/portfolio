@@ -12,6 +12,7 @@ const projetCollection = defineCollection({
 });
 
 const projectlistCollection = defineCollection({
+    type: 'data',
     schema: ({ image }) => z.object ({
         titre: z.string(),
         image: image().refine((img) => img.width >= 0, {
