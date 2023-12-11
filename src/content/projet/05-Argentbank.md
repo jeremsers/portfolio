@@ -2,7 +2,7 @@
 title: Argentbank
 tags : [React, Redux]
 description: Gestion d'un state global grace a Redux
-img: './argbank.png'
+img: '../../assets/argbank.png'
 imgAlt: 'printitjs'
 ---
 

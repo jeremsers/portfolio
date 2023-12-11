@@ -2,5 +2,5 @@
     "id": 0,
     "titre": "Riding cities",
     "description":"html/css",
-    "image": "./ridingcities.png"
+    "image": "../../assets/ridingcities.png"
   }

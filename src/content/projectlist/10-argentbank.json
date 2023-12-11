@@ -2,5 +2,5 @@
   "id": 9,
   "titre": "Argentbank",
   "description": "SPA React avec gestion de state global via redux",
-  "image": "./argbank.png"
+  "image": "../../assets/argbank.png"
 }

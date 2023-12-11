@@ -2,7 +2,7 @@
 title: OhmyFood
 tags : [Html,Css,Animation]
 description: Animation css d'un site de menu en ligne
-img: ./ohmyfood.png
+img: ../../assets/ohmyfood.png
 imgAlt: 'oh my food'
 
 ---

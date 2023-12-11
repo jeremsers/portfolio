@@ -2,5 +2,5 @@
   "id": 5,
   "titre": "MenuMaker",
   "description":"initiation a la gestion de projet",
-  "image": "./projet.jpg"
+  "image": "../../assets/projet.jpg"
 }
