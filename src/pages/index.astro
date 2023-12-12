@@ -5,13 +5,13 @@ import Footer from "../components/Footer.astro";
 import Contact from "../layouts/Contact.astro";
 import Bio from "../layouts/Bio.astro";
 import Timeline from "../layouts/Timeline.astro";
+import banner from '../assets/nbanner.png'
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Jeremy Sersoub - Developpeur web">
   <main>
-    <section class="banner" id="banner">
-      <h1>Jeremy Sersoub Developpeur web</h1>
-    </section>
+    
 
     <Projet />
     <Bio />
@@ -42,20 +42,7 @@ import Timeline from "../layouts/Timeline.astro";
     height: 100%;
   }
 
-  .banner {
-    display: flex;
-    height: 92vh;
-    background: rgb(11, 13, 13);
-    background-image: url("../assets/banner.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-content: center;
-  }
-  .banner h1 {
-    padding-top: 30px;
-    align-self: center;
-    padding-bottom: 15px;
-  }
+  
 
   /*# sourceMappingURL=style.css.map */
 </style>

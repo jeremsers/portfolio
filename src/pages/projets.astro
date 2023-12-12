@@ -38,11 +38,12 @@ const allproj = await getCollection('projectlist')
   }
 
   .container {
-    width: fit-content;
+    width: 100%;
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: auto;
-    column-gap: 10vw;
+    justify-items: center;
+    column-gap: 2px;
     row-gap: 5vh;
   }
 </style>

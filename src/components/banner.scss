@@ -1,0 +1,128 @@
+@keyframes leftShift {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes upShift {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightShift {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes upShift-title {
+  0% {
+    transform: translateY(20px) scale(0.2);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes btn-size {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes icon-scale {
+  0% {
+    transform: scale(0.6) translateY(100px);
+    transform-origin: 0 100;
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.page-title--cheat, .page-title-cheat{
+    opacity:0;
+    animation: rightShift 700ms;
+	animation-fill-mode: forwards;
+  animation-delay: 500ms;
+}
+
+.page-title---cheat{
+  opacity:0;
+  animation: leftShift 700ms;
+animation-fill-mode: forwards;
+
+}
+
+.page-title{
+  opacity:0; 
+  animation: upShift-title 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 1000ms;
+}
+
+.logo-container{
+  opacity:0;
+    animation: leftShift 700ms;
+	animation-fill-mode: forwards;
+}
+
+.logo{
+  opacity:0; 
+  animation: upShift-title 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 2000ms;
+}
+
+.todo-container{
+  opacity:0;
+    animation: upShift 700ms;
+	animation-fill-mode: forwards;
+  animation-delay: 4000ms;
+}

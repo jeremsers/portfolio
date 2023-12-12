@@ -1,0 +1,159 @@
+---
+import { Image } from "astro:assets";
+import h1 from "../assets/h1.png";
+import h1slash from "../assets/h1slash.png";
+import postit from "../assets/postit.png";
+import arrowlogo from "../assets/arrowlogo.png";
+import arrowtitre from "../assets/arrowtitre.png";
+import logo from "../assets/logo.png";
+import './banner.scss'
+---
+
+<section class="banner" id="banner">
+  <div class="title-container">
+    <p class="page-title-cheat">.</p>
+
+    <div class="page-title">
+      <h1>
+        Bonjour, <br />je suis Jeremy Sersoub,<br /> Developpeur web
+      </h1>
+    </div>
+    <p class="page-title---cheat">.<br>.<br>.<br></p>
+
+    <p class="page-title--cheat">.<br>.<br>.<br></p>
+  </div>
+
+  <div class="bottom-container">
+    <div class="todo-container">
+      <p>#TODO :</p>
+      <p>- Trouver une alternance</p>
+    </div>
+    <div class="logo-container">
+      <Image class="logo" src={logo} alt="logo" />
+    </div>
+
+    <style lang="scss">
+      .banner {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: white;
+        width: 100%;
+        justify-content: space-around;
+        background-image: url("../assets/bgg.png");
+      }
+
+      .page-title {
+        & h1 {
+          font-size: clamp(4vw, 0px, 8vw);
+          color: white;
+          text-align: left;
+        }
+        &-cheat {
+          margin-left: clamp(2px, 20vh, 250px);
+
+          &:before {
+            background-image: url("../assets/h1.png");
+            background-size: clamp(100px, 12vw, 200px) clamp(50px, 6vw, 100px);
+            display: inline-block;
+            background-repeat: no-repeat;
+            width: clamp(100px, 12vw, 200px);
+            height: clamp(50px, 6vw, 100px);
+            content: "";
+            position: absolute;
+            transform: translateX(-100%);
+          }
+        }
+
+        &--cheat {
+          font-size: clamp(2vw, 72px, 3vw);
+          color: transparent;
+
+          
+          
+          &:after {
+            background-image: url("../assets/h1slash.png");
+            background-size: clamp(100px, 12vw, 200px) clamp(50px, 6vw, 100px);
+            display: inline-block;
+            background-repeat: no-repeat;
+            width: clamp(100px, 12vw, 200px);
+            height: clamp(50px, 6vw, 100px);
+            content: "";
+            position: absolute;
+            transform: translate(0%, 0);
+          }
+        }
+        &---cheat{
+          font-size: clamp(2vw, 72px, 3vw);
+          color: transparent;
+
+          &:before {
+            background-image: url("../assets/arrowtitre.png");
+            background-size: clamp(160px, 20vw, 600px) clamp(60px, 6vw, 200px);
+            display: inline-block;
+            background-repeat: no-repeat;
+            width: clamp(160px, 20vw, 600px);
+            height: clamp(60px, 6vw, 200px);
+            content: "";
+            position: absolute;
+            transform: translate(-50%, -30%);
+        }
+      }
+    }
+      .title-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+      }
+      .todo-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../assets/postit.png");
+        background-repeat: none;
+        background-size: cover;
+        height: clamp(0px, 30vw, 300px);
+        width: clamp(0px, 30vw, 300px);
+        margin-left: 5%;
+        font-size: clamp(0px, 2vw, 20px);
+      }
+
+      .bottom-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .logo-container {
+        display: flex;
+        justify-content: flex-end;
+
+        &:before {
+          background-image: url("../assets/arrowlogo.png");
+          background-size: clamp(200px, 12vw, 400px) clamp(200px, 12vw, 400px);
+          display: inline-block;
+          background-repeat: no-repeat;
+          width: clamp(200px, 12vw, 400px);
+          height: clamp(200px, 12vw, 400px);
+          content: "";
+          position: absolute;
+          z-index: 2;
+          transform: translate(-25vw, 8vw);
+        }
+        & .logo {
+          position: relative;
+          border-radius: 10px;
+          width: 20vw;
+          height: 20vw;
+          margin-right: 30px;
+        }
+      }
+    
+      .logo {
+      }
+    </style>
+  </div>
+</section>
