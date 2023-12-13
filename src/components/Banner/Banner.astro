@@ -1,11 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import h1 from "../assets/h1.png";
-import h1slash from "../assets/h1slash.png";
-import postit from "../assets/postit.png";
-import arrowlogo from "../assets/arrowlogo.png";
-import arrowtitre from "../assets/arrowtitre.png";
-import logo from "../assets/logo.png";
+
+import logo from "../../assets/logo.png";
 import './banner.scss'
 ---
 
@@ -15,7 +11,7 @@ import './banner.scss'
 
     <div class="page-title">
       <h1>
-        Bonjour, <br />je suis Jeremy Sersoub,<br /> Developpeur web
+        Bonjour,👋 <br />je suis Jeremy Sersoub,<br /> Developpeur web 
       </h1>
     </div>
     <p class="page-title---cheat">.<br>.<br>.<br></p>
@@ -40,7 +36,7 @@ import './banner.scss'
         background: white;
         width: 100%;
         justify-content: space-around;
-        background-image: url("../assets/bgg.png");
+        background-image: url("../../assets/bgg.png");
       }
 
       .page-title {
@@ -53,7 +49,7 @@ import './banner.scss'
           margin-left: clamp(2px, 20vh, 250px);
 
           &:before {
-            background-image: url("../assets/h1.png");
+            background-image: url("../../assets/h1.png");
             background-size: clamp(100px, 12vw, 200px) clamp(50px, 6vw, 100px);
             display: inline-block;
             background-repeat: no-repeat;
@@ -72,7 +68,7 @@ import './banner.scss'
           
           
           &:after {
-            background-image: url("../assets/h1slash.png");
+            background-image: url("../../assets/h1slash.png");
             background-size: clamp(100px, 12vw, 200px) clamp(50px, 6vw, 100px);
             display: inline-block;
             background-repeat: no-repeat;
@@ -88,7 +84,7 @@ import './banner.scss'
           color: transparent;
 
           &:before {
-            background-image: url("../assets/arrowtitre.png");
+            background-image: url("../../assets/arrowtitre.png");
             background-size: clamp(160px, 20vw, 600px) clamp(60px, 6vw, 200px);
             display: inline-block;
             background-repeat: no-repeat;
@@ -111,7 +107,7 @@ import './banner.scss'
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url("../assets/postit.png");
+        background-image: url("../../assets/postit.png");
         background-repeat: none;
         background-size: cover;
         height: clamp(0px, 30vw, 300px);
@@ -132,7 +128,7 @@ import './banner.scss'
         justify-content: flex-end;
 
         &:before {
-          background-image: url("../assets/arrowlogo.png");
+          background-image: url("../../assets/arrowlogo.png");
           background-size: clamp(200px, 12vw, 400px) clamp(200px, 12vw, 400px);
           display: inline-block;
           background-repeat: no-repeat;

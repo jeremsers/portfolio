@@ -3,18 +3,19 @@ import Layout from "../layouts/Layout.astro";
 import Projet from "../layouts/Projet.astro";
 import Footer from "../components/Footer.astro";
 import Contact from "../layouts/Contact.astro";
-import Bio from "../layouts/Bio.astro";
+import Comp from "../layouts/Comp.astro";
 import Timeline from "../layouts/Timeline.astro";
 import banner from '../assets/nbanner.png'
 import { Image } from "astro:assets";
+import Bio from "../layouts/Bio.astro";
 ---
 
 <Layout title="Jeremy Sersoub - Developpeur web">
   <main>
     
-
-    <Projet />
     <Bio />
+    <Projet />
+    <Comp />
     <Timeline />
     <Contact />
   </main>
