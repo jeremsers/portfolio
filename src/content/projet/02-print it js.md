@@ -2,7 +2,7 @@
 title: Print it js
 tags: [Html, css, javascript, animation]
 description: Site vitrine avec réalisation d'animation grace a css et js
-img: '../../assets/printit.png'
+img: '../../assets/covers/printit.png'
 imgAlt: 'printitjs'
 ---
 

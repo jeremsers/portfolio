@@ -1,31 +1,51 @@
 ---
 import TimelineOdd from "../components/Timeline/TimelineOdd.astro";
-import TimelinePair from '../components/Timeline/TimelinePair.astro'
+import TimelinePair from "../components/Timeline/TimelinePair.astro";
+const datacamp = 'https://www.datacamp.com/completed/statement-of-accomplishment/track/b549636e214d0771bdcb4710df8dcf3ca40569b3'
+const ml = '../src/assets/pdf/ml.pdf'
+const dl = '../src/assets/pdf/dl.pdf'
 
 ---
 
+
 <section class="design-section">
   <h2>Mon parcours</h2>
-  
+
   <div class="timeline">
-    <TimelineOdd  title="Formation Integrateur web" content="Openclassroom"/>
-    <TimelinePair title="Formation Deep learning" content="Coursera"/>
-    <TimelineOdd  title="Formation Machine learning" content="Coursera"/>
-    <TimelinePair title="Formation Data scientist" content="Datacamp"/>
-    <TimelineOdd  title="M2 Droit prive" content="Université Toulouse I capitole"/>
+    <TimelineOdd title="Formation Integrateur web" content="Openclassroom" />
+    <TimelinePair title="Formation Deep learning" content="Coursera" link={dl}/>
+    <TimelineOdd title="Formation Machine learning" content="Coursera" link={ml}/>
+    <TimelinePair
+      title="Formation Data scientist"
+      content="Datacamp"
+      link={datacamp}
+    />
+    <TimelineOdd
+      title="M2 Droit prive"
+      content="Université Toulouse I capitole"
+    />
   </div>
 </section>
 
-<style>
+<style lang="scss">
   .design-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: lightyellow;
     min-height: 60vh;
     border-top: 1px solid grey;
+    & h2{
+      display: flex;
+      justify-content: center;
+      border-bottom: #43d590 2px solid;
+      width: 300px;
+      padding-bottom: 15px;
+      font-size: 32px;
+    }
   }
+
 
   .design {
     display: flex;

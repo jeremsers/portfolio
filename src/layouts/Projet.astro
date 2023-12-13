@@ -39,21 +39,23 @@ import { Image } from "astro:assets";
     border-top: 2px solid grey;
     min-height: 100vh;
     padding: 50px 50px;
-    background-color: white;
+    background-color: lightyellow;
     align-items: center;
     color: #1b262c;
   }
   .project h2 {
     padding-bottom: 30px;
     font-size: 48px;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid #43d590;
     text-align: center;
     margin-bottom: 60px;
   }
   .project-container {
+    box-sizing: border-box;
     width: fit-content;
     display: grid;
     width: 100vw;
+    padding: 50px;
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: auto;
     row-gap: 5vh;

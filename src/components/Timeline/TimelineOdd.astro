@@ -1,5 +1,5 @@
 ---
-const {title,content} = Astro.props
+const {title,content,link} = Astro.props
 import '../Timeline/Timeline.scss'
 ---
 
@@ -11,6 +11,7 @@ import '../Timeline/Timeline.scss'
     <div class="timeline-component timeline-content">
       <h3>{title}</h3>
       <p>{content}</p>
+      <a class="link" href={link} target="_blank" rel="noopener noreferrer"></a>
     </div>
 
     

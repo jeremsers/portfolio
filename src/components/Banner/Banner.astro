@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import logo from "../../assets/logo.png";
+import logo from "../../assets/bannerimg/logo.png";
 import './banner.scss'
 ---
 
@@ -36,7 +36,7 @@ import './banner.scss'
         background: white;
         width: 100%;
         justify-content: space-around;
-        background-image: url("../../assets/bgg.png");
+        background-image: url("../../assets/bannerimg/bgg.png");
       }
 
       .page-title {
@@ -46,10 +46,11 @@ import './banner.scss'
           text-align: left;
         }
         &-cheat {
-          margin-left: clamp(2px, 20vh, 250px);
+          margin-left: clamp(2px, 20vh, 250px); 
+          
 
           &:before {
-            background-image: url("../../assets/h1.png");
+            background-image: url("../../assets/bannerimg/h1.png");
             background-size: clamp(100px, 12vw, 200px) clamp(50px, 6vw, 100px);
             display: inline-block;
             background-repeat: no-repeat;
@@ -68,7 +69,7 @@ import './banner.scss'
           
           
           &:after {
-            background-image: url("../../assets/h1slash.png");
+            background-image: url("../../assets/bannerimg/h1slash.png");
             background-size: clamp(100px, 12vw, 200px) clamp(50px, 6vw, 100px);
             display: inline-block;
             background-repeat: no-repeat;
@@ -84,7 +85,7 @@ import './banner.scss'
           color: transparent;
 
           &:before {
-            background-image: url("../../assets/arrowtitre.png");
+            background-image: url("../../assets/bannerimg/arrowtitre.png");
             background-size: clamp(160px, 20vw, 600px) clamp(60px, 6vw, 200px);
             display: inline-block;
             background-repeat: no-repeat;
@@ -100,14 +101,14 @@ import './banner.scss'
         position: relative;
         display: flex;
         flex-direction: row;
-        margin-top: 40px;
+        margin-top: 100px;
       }
       .todo-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url("../../assets/postit.png");
+        background-image: url("../../assets/bannerimg/postit.png");
         background-repeat: none;
         background-size: cover;
         height: clamp(0px, 30vw, 300px);
@@ -126,9 +127,11 @@ import './banner.scss'
       .logo-container {
         display: flex;
         justify-content: flex-end;
+        margin-right: 50px;
+        margin-bottom: 50px;
 
         &:before {
-          background-image: url("../../assets/arrowlogo.png");
+          background-image: url("../../assets/bannerimg/arrowlogo.png");
           background-size: clamp(200px, 12vw, 400px) clamp(200px, 12vw, 400px);
           display: inline-block;
           background-repeat: no-repeat;
@@ -144,12 +147,10 @@ import './banner.scss'
           border-radius: 10px;
           width: 20vw;
           height: 20vw;
-          margin-right: 30px;
         }
       }
     
-      .logo {
-      }
+      
     </style>
   </div>
 </section>

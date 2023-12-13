@@ -1,16 +1,16 @@
 ---
-import js from "../assets/js.svg";
-import react from "../assets/react.svg";
-import redux from "../assets/redux.svg";
-import sass from "../assets/sass.svg";
-import css from "../assets/css.svg";
-import html from "../assets/html.svg";
-import astro from "../assets/astro.svg";
+import js from "../assets/svg/js.svg";
+import react from "../assets/svg/react.svg";
+import redux from "../assets/svg/redux.svg";
+import sass from "../assets/svg/sass.svg";
+import css from "../assets/svg/css.svg";
+import html from "../assets/svg/html.svg";
+import astro from "../assets/svg/astro.svg";
 import { Image } from "astro:assets";
 ---
 
 <section class="bio" id="bio">
-  <h2>Formation et competences</h2>
+  <h2>Competences</h2>
   <div class="bio-container">
     <div class="formation">
       <article>
@@ -84,24 +84,24 @@ import { Image } from "astro:assets";
   background-size: cover;
   background-repeat: no-repeat; */
     min-height: 60vh;
-    background-color: white;
+    background-color: #43d590;
     color: #1b262c;
     border-top: 2px solid grey;
     padding: 50px;
     gap: 50px;
     justify-content: center;
     align-items: center;
-    & bio h2 {
+    color: white;
+    &  h2 {
       width: fit-content;
       padding: 15px;
       font-size: 32px;
       text-align: center;
       padding-bottom: 15px;
-      border-bottom: 2px solid grey;
+      border-bottom: 2px solid lightyellow;
+      color: black;
     }
-    & bio p {
-      font-size: 20px;
-    }
+    
     &-container {
       display: flex;
       flex-direction: column;
@@ -115,13 +115,15 @@ import { Image } from "astro:assets";
     display: flex;
     flex-direction: row;
     & article {
-      
+      font-size: 20px;
     }
   }
   .competence {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    justify-content: space-evenly;
+    margin-top: 40px;
     & article {
       width: 50%;
     }
@@ -138,6 +140,8 @@ import { Image } from "astro:assets";
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px;
+
   }
 
 </style>

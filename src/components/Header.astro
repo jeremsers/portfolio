@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
 const { head } = Astro.props;
-import logo from '../assets/logo.png'
+import logo from '../assets/bannerimg/logo.png'
 ---
 
 
   <header class="header">
-    <div class="logo">
+    <div class="logohead">
      
       <a href="./"> <Image src={logo} alt='logo'/></a>
     </div>
@@ -45,14 +45,14 @@ import logo from '../assets/logo.png'
   }
   
 
-  .logo {
+  .logohead {
     margin-left: 30px;
     & img{
       height: 40px;
       width: 40px;
     }
   }
-  .logo a {
+  .logohead a {
     color: white;
     text-decoration: none;
   }
@@ -70,5 +70,11 @@ import logo from '../assets/logo.png'
   .navbar ul li a {
     color: white;
     text-decoration: none;
+    text-shadow:
+    1px 0 black,
+    0 -1px black,
+    -1px 0 black,
+    0 1px black;
+    
   }
 </style>
