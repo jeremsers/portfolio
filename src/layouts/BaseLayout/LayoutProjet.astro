@@ -1,11 +1,10 @@
 ---
-import Header from "../components/Header.astro";
+import HeaderPro from "../../components/Headers/HeaderPro.astro";
 import { ViewTransitions } from "astro:transitions";
-const headtype = "Jeremy Sersoub";
-import { Image } from "astro:assets";
-const { title } = Astro.props;
-import banner from '../assets/nbanner1.png'
-import Banner from "../components/Banner/Banner.astro";
+const headtype = "back";
+
+const { title, frontmatter } = Astro.props;
+console.log(frontmatter);
 ---
 
 <!doctype html>
@@ -20,9 +19,7 @@ import Banner from "../components/Banner/Banner.astro";
     <title>{title}</title>
   </head>
   <body>
-    <Header head={headtype} />
-    <Banner/>
-    
+    <HeaderPro head={headtype} />
     <slot />
   </body><style is:global>
     :root {
@@ -40,7 +37,6 @@ import Banner from "../components/Banner/Banner.astro";
       font-family: system-ui, sans-serif;
       background: #13151a;
       background-size: 224px;
-      overflow-x: hidden;
     }
     code {
       font-family:
@@ -60,8 +56,6 @@ import Banner from "../components/Banner/Banner.astro";
       justify-content: center;
       margin: 0 auto;
       height: 100%;
-      
     }
-   
   </style>
 </html>
