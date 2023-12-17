@@ -6,7 +6,7 @@ import sass from "../assets/svg/sass.svg";
 import css from "../assets/svg/css.svg";
 import html from "../assets/svg/html.svg";
 import astro from "../assets/svg/astro.svg";
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 ---
 
 <section class="bio" id="bio">
@@ -42,25 +42,25 @@ import { Image } from "astro:assets";
       <div class="categorie">
         <h3>Languages</h3>
         <div class="image-container">
-          <Image class="icon" src={html} alt="html" />
-          <Image class="icon" src={css} alt="css" />
-          <Image class="icon" src={js} alt="js" />
+          <Picture class="icon" src={html} alt="html" />
+          <Picture class="icon" src={css} alt="css" />
+          <Picture class="icon" src={js} alt="js" />
         </div>
       </div>
       <div class="categorie">
         <h3>Framework</h3>
 
         <div class="image-container">
-          <Image class="icon" src={react} alt="react" />
-          <Image class="icon" src={astro} alt="astro" />
+          <Picture class="icon" src={react} alt="react" />
+          <Picture class="icon" src={astro} alt="astro" />
         </div>
       </div>
       <div class="categorie">
         <h3>Outils</h3>
 
         <div class="image-container">
-          <Image class="icon" src={sass} alt="sass" />
-          <Image class="icon" src={redux} alt="redux" />
+          <Picture class="icon" src={sass} alt="sass" />
+          <Picture class="icon" src={redux} alt="redux" />
         </div>
       </div>
     </div>
@@ -76,15 +76,17 @@ import { Image } from "astro:assets";
   background-repeat: no-repeat; */
     min-height: 60vh;
     background-color: $main;
-    
-    border-top: 2px solid grey;
-    padding: 50px;
+
+    /* border-top: 2px solid grey; */
+    padding: 100px 50px ;
     gap: 50px;
     justify-content: center;
     align-items: center;
     color: $text-prim;
+    clip-path: polygon(0 50px,100% 0,100% 100%,0 calc(100% - 50px)); 
+    margin-top: -40px;
     & h2 {
-      @include title($second)
+      @include title($second);
     }
 
     &-container {
@@ -100,8 +102,9 @@ import { Image } from "astro:assets";
     display: flex;
     flex-direction: row;
     & article {
-      font-size: clamp(12px, 4vw,20px);
+      font-size: clamp(12px, 4vw, 20px);
       letter-spacing: 1px;
+      word-spacing: -1px;
       text-align: justify;
     }
   }
@@ -115,7 +118,6 @@ import { Image } from "astro:assets";
 
     justify-content: space-evenly;
     margin-top: 40px;
-   
   }
   .icon {
     height: 100px;
@@ -131,12 +133,11 @@ import { Image } from "astro:assets";
     margin-top: 40px;
   }
 
-  .image-container{
+  .image-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 5px;
   }
-
 </style>

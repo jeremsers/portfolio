@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 
 import logo from "../../assets/bannerimg/logo.png";
-import './banner.scss'
+import "./banner.scss";
 ---
 
 <section class="banner" id="banner">
@@ -11,12 +11,12 @@ import './banner.scss'
 
     <div class="page-title">
       <h1>
-        Bonjour,👋 <br />je suis Jeremy Sersoub,<br /> Developpeur web 
+        Bonjour,👋 <br />je suis Jeremy Sersoub,<br /> Developpeur web
       </h1>
     </div>
-    <p class="page-title---cheat">.<br>.<br>.<br></p>
+    <p class="page-title---cheat">.<br />.<br />.<br /></p>
 
-    <p class="page-title--cheat">.<br>.<br>.<br></p>
+    <p class="page-title--cheat">.<br />.<br />.<br /></p>
   </div>
 
   <div class="bottom-container">
@@ -25,7 +25,7 @@ import './banner.scss'
       <p>- Trouver une alternance</p>
     </div>
     <div class="logo-container">
-      <Image class="logo" src={logo} alt="logo" />
+      <Picture class="logo" src={logo} alt="logo" />
     </div>
 
     <style lang="scss">
@@ -38,10 +38,10 @@ import './banner.scss'
         width: 100%;
         justify-content: space-around;
         background-image: url("../../assets/bannerimg/bgg.png");
-        @media screen and (max-width:765px) {
+        
+        @media screen and (max-width: 765px) {
           justify-content: center;
           gap: 15vh;
-          
         }
       }
 
@@ -52,8 +52,7 @@ import './banner.scss'
           text-align: left;
         }
         &-cheat {
-          margin-left: clamp(2px, 15vw, 250px); 
-          
+          margin-left: clamp(2px, 15vw, 250px);
 
           &:before {
             background-image: url("../../assets/bannerimg/h1.png");
@@ -65,8 +64,8 @@ import './banner.scss'
             content: "";
             position: absolute;
             transform: translateX(-100%);
-            @media screen and (max-width:500px) {
-            transform: translate(-60%, -75%);
+            @media screen and (max-width: 500px) {
+              transform: translate(-60%, -75%);
             }
           }
         }
@@ -75,8 +74,6 @@ import './banner.scss'
           font-size: clamp(2vw, 72px, 3vw);
           color: transparent;
 
-          
-          
           &:after {
             background-image: url("../../assets/bannerimg/h1slash.png");
             background-size: $greenh-width $greenh-height;
@@ -87,12 +84,12 @@ import './banner.scss'
             content: "";
             position: absolute;
             transform: translate(0%, 0);
-            @media screen and (max-width:500px) {
-            transform: translate(-60%, 140%);
+            @media screen and (max-width: 500px) {
+              transform: translate(-60%, 140%);
             }
           }
         }
-        &---cheat{
+        &---cheat {
           font-size: clamp(2vw, 72px, 3vw);
           color: transparent;
 
@@ -106,12 +103,12 @@ import './banner.scss'
             content: "";
             position: absolute;
             transform: translate(-50%, -30%);
-            @media screen and (max-width:500px) {
-            transform: translate(-100%, -75%);
+            @media screen and (max-width: 500px) {
+              transform: translate(-100%, -75%);
             }
+          }
         }
       }
-    }
       .title-container {
         position: relative;
         display: flex;
@@ -139,7 +136,7 @@ import './banner.scss'
         justify-content: space-around;
         width: 100%;
         gap: 15vw;
-        @media screen and (max-width:500px) {
+        @media screen and (max-width: 500px) {
           flex-direction: column-reverse;
           align-items: center;
           justify-content: space-between;
@@ -150,8 +147,6 @@ import './banner.scss'
       .logo-container {
         display: flex;
         justify-content: flex-end;
-        
-        
 
         &:before {
           background-image: url("../../assets/bannerimg/arrowlogo.png");
@@ -164,21 +159,19 @@ import './banner.scss'
           position: absolute;
           z-index: 2;
           transform: translate(-25vw, 8vw);
-          @media screen and (max-width:500px) {
+          @media screen and (max-width: 500px) {
             transform: translate(-31vw, 8vw);
-            }
+          }
         }
         & .logo {
           position: relative;
           border-radius: 10px;
           width: 20vw;
           height: 20vw;
-          min-height: 100px ;
-          min-width: 100px ;
+          min-height: 100px;
+          min-width: 100px;
         }
       }
-    
-      
     </style>
   </div>
 </section>

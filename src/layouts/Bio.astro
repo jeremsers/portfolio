@@ -46,7 +46,9 @@ import profile from "../assets/profil.jpeg";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px;
+    padding: 100px 50px;
+    border-top:2px solid $third;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - 50px));
     
 
     & h2 {
@@ -59,6 +61,7 @@ import profile from "../assets/profil.jpeg";
       width: 50%;
       text-align: justify;
       letter-spacing: 1px;
+      word-spacing: -1px;
     }
   }
   .profil {

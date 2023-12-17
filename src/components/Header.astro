@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 const { type } = Astro.props;
 import logo from "../assets/bannerimg/logo.png";
 import { Icon } from "astro-icon";
@@ -22,7 +22,7 @@ import { Icon } from "astro-icon";
       <div class="logohead">
         <a href="./">
           {" "}
-          <Image src={logo} alt="logo" />
+          <Picture src={logo} alt="logo" />
         </a>
       </div>
     )

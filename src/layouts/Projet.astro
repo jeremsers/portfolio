@@ -2,9 +2,8 @@
 import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("projet");
-import plus from '../assets/plus.png'
-import { Image } from "astro:assets";
-
+import plus from "../assets/plus.png";
+import { Picture } from "astro:assets";
 ---
 
 <section class="project" id="project">
@@ -17,14 +16,14 @@ import { Image } from "astro:assets";
           title={post.data.title}
           desc={post.data.description}
           img={post.data.img}
-          balise='a'
+          balise="a"
         />
       ))
     }
 
     <article class="other">
       <a class="link" href="/projets"></a>
-      <Image class="animate5" src={plus} alt="projet" />
+      <Picture class="animate5" src={plus} alt="projet" />
     </article>
   </div>
 </section>
@@ -33,19 +32,25 @@ import { Image } from "astro:assets";
   .project {
     display: flex;
     flex-direction: column;
-    /* background-image: url("../assets/projectbg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; */
-    border-top: 2px solid grey;
+    
+    /* border-top: 2px solid grey; */
     min-height: 100vh;
-    padding: 50px 50px;
+    padding: 100px 50px;
     background-color: $second;
     align-items: center;
     color: $third;
-   
+    /* --mask:
+    radial-gradient(156.52px at 50% 210.00px,#000 99%,#0000 101%) calc(50% - 140px) 0/280px 51% repeat-x,
+    radial-gradient(156.52px at 50% -140px,#0000 99%,#000 101%) 50% 70px/280px calc(51% - 70px) repeat-x,
+    radial-gradient(156.52px at 50% calc(100% - 210.00px),#000 99%,#0000 101%) 50% 100%/280px 51% repeat-x,
+    radial-gradient(156.52px at 50% calc(100% + 140.00px),#0000 99%,#000 101%) calc(50% - 140px) calc(100% - 70px)/280px calc(51% - 70px) repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask); */
+          clip-path: polygon(0 0,100% 50px,100% calc(100% - 50px),0 100%);
+  margin-top: -40px;
   }
   .project h2 {
-    @include title($main)
+    @include title($main);
   }
   .project-container {
     box-sizing: border-box;
@@ -60,10 +65,10 @@ import { Image } from "astro:assets";
 
     align-items: center;
     justify-items: center;
-    @media  (max-width: 1024px) {
+    @media (max-width: 1024px) {
       grid-template-columns: 2fr 2fr;
     }
-    @media  (max-width:724px) {
+    @media (max-width: 724px) {
       grid-template-columns: 1fr;
     }
   }
@@ -75,14 +80,17 @@ import { Image } from "astro:assets";
     width: 100px;
     border: 1px solid black;
     box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.99);
-    transition: transform 500ms, box-shadow 500ms;
-    
+    transition:
+      transform 500ms,
+      box-shadow 500ms;
 
-    &:hover{
+    &:hover {
       transform: scale(1.05);
       box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 0.99);
-      
-      transition: transform 500ms, box-shadow 500ms;
+
+      transition:
+        transform 500ms,
+        box-shadow 500ms;
     }
   }
 
