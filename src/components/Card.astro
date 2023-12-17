@@ -30,7 +30,7 @@ import { Image } from "astro:assets";
   </div>
   </article>
   
-<style>
+<style lang="scss">
   .darken {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -42,7 +42,7 @@ import { Image } from "astro:assets";
   }
   .project-card:hover > .darken,
   .project-card:hover > .project-card--text {
-    color: white;
+    color: $text-prim;
     opacity: 1;
   }
 
@@ -55,17 +55,31 @@ import { Image } from "astro:assets";
     outline: #43d590 dashed 2px;
     outline-offset: 15px;
     box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.99);
+    transition: transform 500ms, box-shadow 500ms, outline-offset 500ms;
+    display: flex;
+    align-items: center;
+    
+
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 11px 11px 0px 0px rgba(0, 0, 0, 0.99);
+      
+      transition: transform 500ms, box-shadow 500ms, outline-offset 500ms;
+      outline-offset: 18px;
+
+    }
   }
   .project-card--text {
     position: absolute;
-    bottom: 40%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 100%;
-    z-index: 5;
+    z-index: 3;
     opacity: 0;
+    font-size: clamp(12px,2vw,16px);
   }
   .project-card img {
     position: absolute;

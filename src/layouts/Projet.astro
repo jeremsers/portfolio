@@ -29,7 +29,7 @@ import { Image } from "astro:assets";
   </div>
 </section>
 
-<style>
+<style lang="scss">
   .project {
     display: flex;
     flex-direction: column;
@@ -39,16 +39,13 @@ import { Image } from "astro:assets";
     border-top: 2px solid grey;
     min-height: 100vh;
     padding: 50px 50px;
-    background-color: lightyellow;
+    background-color: $second;
     align-items: center;
-    color: #1b262c;
+    color: $third;
+   
   }
   .project h2 {
-    padding-bottom: 30px;
-    font-size: 48px;
-    border-bottom: 2px solid #43d590;
-    text-align: center;
-    margin-bottom: 60px;
+    @include title($main)
   }
   .project-container {
     box-sizing: border-box;
@@ -59,8 +56,16 @@ import { Image } from "astro:assets";
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: auto;
     row-gap: 5vh;
+    column-gap: 2vw;
+
     align-items: center;
     justify-items: center;
+    @media  (max-width: 1024px) {
+      grid-template-columns: 2fr 2fr;
+    }
+    @media  (max-width:724px) {
+      grid-template-columns: 1fr;
+    }
   }
   .other {
     position: relative;
@@ -70,6 +75,15 @@ import { Image } from "astro:assets";
     width: 100px;
     border: 1px solid black;
     box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.99);
+    transition: transform 500ms, box-shadow 500ms;
+    
+
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 0.99);
+      
+      transition: transform 500ms, box-shadow 500ms;
+    }
   }
 
   .other img {

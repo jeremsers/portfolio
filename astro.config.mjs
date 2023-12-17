@@ -11,4 +11,15 @@ export default defineConfig({
     },
   
     }),
+    vite: {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            additionalData: ` 
+              @use "./src/assets/style/utils.scss" as *;
+            `,
+          },
+        },
+      },
+    },
 });

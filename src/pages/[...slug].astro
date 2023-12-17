@@ -10,7 +10,7 @@ export async function getStaticPaths() {
     props: { entry },
   }));
 }
-const head = "back";
+
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
@@ -30,13 +30,10 @@ const { Content } = await entry.render();
   </div>
 </LayoutProjet>
 
-<style>
-  h1 {
-    font-size: 3rem;
-  }
-
+<style lang="scss">
+  
   .pagecontainer {
-    background-color: lightyellow;
+    background-color: $second;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +46,7 @@ const { Content } = await entry.render();
     align-items: center;
     justify-content: space-between;
     gap: 50px;
+    
   }
   .projectpage img {
     padding: 25px;

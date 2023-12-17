@@ -15,35 +15,33 @@ import { Image } from "astro:assets";
     <div class="formation">
       <article>
         <p>
-          J'ai suivi durant l'annee 2023 la formation openclassroom
-          d'integrateur web qui m'as permis de découvrir les bases du
-          developpement front end j'ai eu l'occasion d'apprendre differentes
-          technologies telles que Html css javascript React ... Le point fort de
-          ce cursus est l'accent qui est mis sur le developpement d'une
-          autonomie en tant que developpeur. Les differents projets que j'ai pu
-          realiser suivait un template similaire avec souvent une maquette a
-          implementer et des fonctionnalites a mettre en place et il me revenait
-          de determiner la marche a suivre pour obtenir le resultat attendu.
-          Ainsi en plus des competences purement techniques qu'il etait
-          necessaires que j'acquiert pour mettre en place les solutions, j'ai
-          aussi pu grandement travailler sur ma capcite a resoudre des
-          problemes.
+          J'ai suivi durant l'année 2023 la formation OpenClassrooms
+          d'intégrateur web qui m'a permis de découvrir les bases du
+          développement front-end. J'ai eu l'occasion d'apprendre différentes
+          technologies telles que HTML, CSS, JavaScript, React, etc. Le point
+          fort de ce cursus est l'accent qui est mis sur le développement d'une
+          autonomie en tant que développeur. Les différents projets que j'ai pu
+          réaliser suivaient un template similaire, avec souvent une maquette à
+          implémenter et des fonctionnalités à mettre en place, et il me
+          revenait de déterminer la marche à suivre pour obtenir le résultat
+          attendu. Ainsi, en plus des compétences purement techniques qu'il
+          était nécessaire que j'acquière pour mettre en place les solutions,
+          j'ai aussi pu grandement travailler sur ma capacité à résoudre des
+          problèmes.
         </p>
         <p>
-          Cette methode de travail m'as permis d'apprendre a exploiter le large
-          choix d'outils existant pour selectionner celui qui sera le plus
-          adapte a la resolution d'un probleme mais aussi a etre efficace dans
-          l'apprentissage de la mise en oeuvre de celui-ci afin de mettre en
-          place une solution qui repond idealment a mon probleme initial.
+          Cette méthode de travail m'a permis d'apprendre à exploiter le large
+          choix d'outils existant pour sélectionner celui qui sera le plus
+          adapté à la résolution d'un problème, mais aussi à être efficace dans
+          l'apprentissage de la mise en œuvre de celui-ci afin de mettre en
+          place une solution qui répond idéalement à mon problème initial.
         </p>
       </article>
-      
     </div>
     <div class="competence">
       <div class="categorie">
         <h3>Languages</h3>
         <div class="image-container">
-
           <Image class="icon" src={html} alt="html" />
           <Image class="icon" src={css} alt="css" />
           <Image class="icon" src={js} alt="js" />
@@ -53,25 +51,18 @@ import { Image } from "astro:assets";
         <h3>Framework</h3>
 
         <div class="image-container">
-
           <Image class="icon" src={react} alt="react" />
           <Image class="icon" src={astro} alt="astro" />
         </div>
-        
       </div>
       <div class="categorie">
         <h3>Outils</h3>
 
         <div class="image-container">
-
           <Image class="icon" src={sass} alt="sass" />
           <Image class="icon" src={redux} alt="redux" />
         </div>
       </div>
-      <div class="formation-img">
-      </div>
-      
-      
     </div>
   </div>
 </section>
@@ -84,24 +75,18 @@ import { Image } from "astro:assets";
   background-size: cover;
   background-repeat: no-repeat; */
     min-height: 60vh;
-    background-color: #43d590;
-    color: #1b262c;
+    background-color: $main;
+    
     border-top: 2px solid grey;
     padding: 50px;
     gap: 50px;
     justify-content: center;
     align-items: center;
-    color: white;
-    &  h2 {
-      width: fit-content;
-      padding: 15px;
-      font-size: 32px;
-      text-align: center;
-      padding-bottom: 15px;
-      border-bottom: 2px solid lightyellow;
-      color: black;
+    color: $text-prim;
+    & h2 {
+      @include title($second)
     }
-    
+
     &-container {
       display: flex;
       flex-direction: column;
@@ -115,33 +100,43 @@ import { Image } from "astro:assets";
     display: flex;
     flex-direction: row;
     & article {
-      font-size: 20px;
+      font-size: clamp(12px, 4vw,20px);
+      letter-spacing: 1px;
+      text-align: justify;
     }
   }
   .competence {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
     justify-content: space-evenly;
     margin-top: 40px;
-    & article {
-      width: 50%;
-    }
-    &-img {
-      width: 50%;
-    }
+   
   }
   .icon {
     height: 100px;
     width: 100px;
+    padding: 5px;
+    background-color: rgba($text-prim, 0.99);
+    border-radius: 30px;
   }
-
-  .categorie{
-    display:flex;
+  .categorie {
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
+  }
 
+  .image-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
   }
 
 </style>

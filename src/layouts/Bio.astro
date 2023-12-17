@@ -1,79 +1,94 @@
 ---
-import { Image } from 'astro:assets';
-import profile from '../assets/profil.jpeg'
+import { Image } from "astro:assets";
+import profile from "../assets/profil.jpeg";
 ---
-<section>
-    <h2>Bio</h2>
-    <div class="bio-container">
-        
-        <article>
-        <p>
-          Bonjour, je suis jeremy Sersoub. Je suis actuellement en reconversion dans le
-          développement web apres des études de droit et je suis à la recherche
-          d'une alternance.<br> J'ai eu l'occasion de commencer ma formation en
-          autodidacte dans un premier temps, dans la data scienceafin de
-          lier ma formation initiale avec mon interet pour le domaine du
-          développement mais j'ai rapidement compris que je souhaitais m'investir
-          totalement dans ce dernier. J'ai donc démarrer une formation de
-          développeur web avec Open classroom et je souhaite maintenant
-          poursuivre sur cette voie grace à une alternance pour approfondir ma
-          connaissance théorique tout en me perfectionnant avec une pratique
-          quotidienne du développement dans un contexte professionnel.
-        </p>
-        <p>
-          Ce portfolio vous permettra d'avoir une idée de ce dont je suis
-          capable actuellement afin, je l'espère, de vous encourager à me faire
-          confiance pour intégrer votre équipe en tant qu'alternant.<br> Bonne
-          visite !
-        </p>
-      </article>
-      <div class="profile-container">
 
-          <Image class='profil' src={profile} alt='photo de profil' format='avif' height="450" width="360" ;/>
-      </div>
+<section>
+  <h2>Bio</h2>
+  <div class="bio-container">
+    <article>
+      <p>
+        Bonjour, je suis Jeremy Sersoub. Je suis actuellement en reconversion
+        dans le développement web après des études de droit et je suis à la
+        recherche d'une alternance.<br /> J'ai eu l'occasion de commencer ma
+        formation en autodidacte dans un premier temps, dans la data science
+        afin de lier ma formation initiale avec mon intérêt pour le domaine du
+        développement, mais j'ai rapidement compris que je souhaitais m'investir
+        totalement dans ce dernier. J'ai donc démarré une formation de
+        développeur web avec OpenClassrooms et je souhaite maintenant poursuivre
+        sur cette voie grâce à une alternance pour approfondir ma connaissance
+        théorique tout en me perfectionnant avec une pratique quotidienne du
+        développement dans un contexte professionnel.
+      </p>
+      <p>
+        Ce portfolio vous permettra d'avoir une idée de ce dont je suis capable
+        actuellement afin, je l'espère, de vous encourager à me faire confiance
+        pour intégrer votre équipe en tant qu'alternant.<br /> Bonne visite !
+      </p>
+    </article>
+    <div class="profile-container">
+      <Image
+        class="profil"
+        src={profile}
+        alt="photo de profil"
+        format="avif"
+        style='height:100%,width:100%,object-fit:cover'
+        ;
+      />
     </div>
+  </div>
 </section>
 
 <style lang="scss">
-    section{
-        background-color: #43d590;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 60px;
-        & h2{
-            font-size: 48px;
-            width: 200px;
-            border-bottom: 1px solid lightyellow;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 100px;
-        }
-        & article{
-            color: white;
-            font-size: 20px;
-            padding: 0px 100px;
-            width: 50%;
-        }
+  section {
+    background-color: $main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    
+
+    & h2 {
+     @include title($second)
     }
-    .profil{
-        object-fit: contain;
-        border-radius: 100%;
-        box-shadow:  1px 1px 12px 0 rgba(255,255,255,0.5);
+    & article {
+      color: $text-prim;
+      font-size: clamp(12px, 4vw,20px);
+      padding: 0px 5vw;
+      width: 50%;
+      text-align: justify;
+      letter-spacing: 1px;
+    }
+  }
+  .profil {
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    box-shadow: 1px 1px 12px 0 rgba(255, 255, 255, 0.5);
+  }
+  
+  .bio-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    @media screen and (max-width: 1023px) {
+        flex-direction: column-reverse;
         
+        & article {
+            width: 100% ;
+        }
+        & .profil{
+            height: 100%;
+            width: 100%;
+        }
     }
-    .bio-container{
-        display: flex;
-        flex-direction: row;
-        width: 100%; 
-        align-items: center;
-    }
-    .profile-container{
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
+  }
+  .profile-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>

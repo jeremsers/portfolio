@@ -1,9 +1,11 @@
 ---
-import Header from "../../components/Headers/Header.astro";
+import Header from "../../components/Header.astro";
 import { ViewTransitions } from "astro:transitions";
-const headtype = "Jeremy Sersoub";
+
 const { title } = Astro.props;
 import Banner from "../../components/Banner/Banner.astro";
+import '@fontsource-variable/cabin'
+
 ---
 
 <!doctype html>
@@ -18,11 +20,15 @@ import Banner from "../../components/Banner/Banner.astro";
     <title>{title}</title>
   </head>
   <body>
-    <Header head={headtype} />
+    <Header type='base' />
     <Banner/>
     
     <slot />
-  </body><style is:global>
+  </body>
+  <style is:global lang="scss">
+ 
+
+
     :root {
       --accent: 136, 58, 234;
       --accent-light: 224, 204, 250;
@@ -35,10 +41,11 @@ import Banner from "../../components/Banner/Banner.astro";
       );
     }
     html {
-      font-family: system-ui, sans-serif;
+      font-family: 'Cabin Variable', sans-serif;
       background: #13151a;
       background-size: 224px;
       overflow-x: hidden;
+      scroll-behavior: smooth;
       
     }
     code {

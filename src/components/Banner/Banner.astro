@@ -33,32 +33,41 @@ import './banner.scss'
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        max-height: fit-content;
         background: white;
         width: 100%;
         justify-content: space-around;
         background-image: url("../../assets/bannerimg/bgg.png");
+        @media screen and (max-width:765px) {
+          justify-content: center;
+          gap: 15vh;
+          
+        }
       }
 
       .page-title {
         & h1 {
-          font-size: clamp(4vw, 0px, 8vw);
-          color: white;
+          font-size: clamp(24px, 4vw, 72px);
+          color: $text-prim;
           text-align: left;
         }
         &-cheat {
-          margin-left: clamp(2px, 20vh, 250px); 
+          margin-left: clamp(2px, 15vw, 250px); 
           
 
           &:before {
             background-image: url("../../assets/bannerimg/h1.png");
-            background-size: clamp(100px, 12vw, 200px) clamp(50px, 6vw, 100px);
+            background-size: $greenh-width $greenh-height;
             display: inline-block;
             background-repeat: no-repeat;
-            width: clamp(100px, 12vw, 200px);
-            height: clamp(50px, 6vw, 100px);
+            width: $greenh-width;
+            height: $greenh-height;
             content: "";
             position: absolute;
             transform: translateX(-100%);
+            @media screen and (max-width:500px) {
+            transform: translate(-60%, -75%);
+            }
           }
         }
 
@@ -70,14 +79,17 @@ import './banner.scss'
           
           &:after {
             background-image: url("../../assets/bannerimg/h1slash.png");
-            background-size: clamp(100px, 12vw, 200px) clamp(50px, 6vw, 100px);
+            background-size: $greenh-width $greenh-height;
             display: inline-block;
             background-repeat: no-repeat;
-            width: clamp(100px, 12vw, 200px);
-            height: clamp(50px, 6vw, 100px);
+            width: $greenh-width;
+            height: $greenh-height;
             content: "";
             position: absolute;
             transform: translate(0%, 0);
+            @media screen and (max-width:500px) {
+            transform: translate(-60%, 140%);
+            }
           }
         }
         &---cheat{
@@ -94,6 +106,9 @@ import './banner.scss'
             content: "";
             position: absolute;
             transform: translate(-50%, -30%);
+            @media screen and (max-width:500px) {
+            transform: translate(-100%, -75%);
+            }
         }
       }
     }
@@ -111,42 +126,55 @@ import './banner.scss'
         background-image: url("../../assets/bannerimg/postit.png");
         background-repeat: none;
         background-size: cover;
-        height: clamp(0px, 30vw, 300px);
-        width: clamp(0px, 30vw, 300px);
-        margin-left: 5%;
-        font-size: clamp(0px, 2vw, 20px);
+        height: clamp(150px, 30vw, 300px);
+        width: clamp(150px, 30vw, 300px);
+        font-size: clamp(12px, 3vw, 20px);
+        text-align: center;
+        padding: 10px;
       }
 
       .bottom-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
+        gap: 15vw;
+        @media screen and (max-width:500px) {
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10vh;
+        }
       }
 
       .logo-container {
         display: flex;
         justify-content: flex-end;
-        margin-right: 50px;
-        margin-bottom: 50px;
+        
+        
 
         &:before {
           background-image: url("../../assets/bannerimg/arrowlogo.png");
-          background-size: clamp(200px, 12vw, 400px) clamp(200px, 12vw, 400px);
+          background-size: $logo-width $logo-height;
           display: inline-block;
           background-repeat: no-repeat;
-          width: clamp(200px, 12vw, 400px);
-          height: clamp(200px, 12vw, 400px);
+          width: $logo-width;
+          height: $logo-height;
           content: "";
           position: absolute;
           z-index: 2;
           transform: translate(-25vw, 8vw);
+          @media screen and (max-width:500px) {
+            transform: translate(-31vw, 8vw);
+            }
         }
         & .logo {
           position: relative;
           border-radius: 10px;
           width: 20vw;
           height: 20vw;
+          min-height: 100px ;
+          min-width: 100px ;
         }
       }
     

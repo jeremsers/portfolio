@@ -2,8 +2,8 @@
 import TimelineOdd from "../components/Timeline/TimelineOdd.astro";
 import TimelinePair from "../components/Timeline/TimelinePair.astro";
 const datacamp = 'https://www.datacamp.com/completed/statement-of-accomplishment/track/b549636e214d0771bdcb4710df8dcf3ca40569b3'
-const ml = '../src/assets/pdf/ml.pdf'
-const dl = '../src/assets/pdf/dl.pdf'
+const ml = 'https://www.coursera.org/account/accomplishments/specialization/5MJ7GGEH4QFC'
+const dl = 'https://www.coursera.org/account/accomplishments/specialization/2ARPB87BU7KF'
 
 ---
 
@@ -33,16 +33,11 @@ const dl = '../src/assets/pdf/dl.pdf'
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: lightyellow;
+    background-color: $second;
     min-height: 60vh;
     border-top: 1px solid grey;
     & h2{
-      display: flex;
-      justify-content: center;
-      border-bottom: #43d590 2px solid;
-      width: 300px;
-      padding-bottom: 15px;
-      font-size: 32px;
+      @include title($main)
     }
   }
 
@@ -69,7 +64,7 @@ const dl = '../src/assets/pdf/dl.pdf'
     text-align: center;
     padding: 10px;
     background: #43d590;
-    color: white;
+    color: $text-prim;
     padding: 5px;
     transition: 0.4s ease;
     overflow-wrap: break-word !important;
@@ -89,7 +84,7 @@ const dl = '../src/assets/pdf/dl.pdf'
       width: 15px;
       height: 15px;
       border-radius: 50%;
-      background-color: #ecda3c;
+      background-color: $timeline;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
     }
@@ -98,7 +93,7 @@ const dl = '../src/assets/pdf/dl.pdf'
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #ecda3c;
+      background-color: $timeline;
       width: 3px;
       height: 100%;
     }

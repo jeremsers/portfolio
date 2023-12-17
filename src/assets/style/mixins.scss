@@ -1,0 +1,10 @@
+@mixin title($border) {
+    width: fit-content;
+      padding: 15px;
+      font-size: clamp(36px,15vw,48px);
+      letter-spacing: -2px;
+      text-align: center;
+      padding-bottom: 15px;
+      border-bottom: 2px solid $border;
+      color: #1b262c;
+}

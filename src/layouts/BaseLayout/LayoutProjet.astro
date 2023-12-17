@@ -1,17 +1,18 @@
 ---
-import HeaderPro from "../../components/Headers/HeaderPro.astro";
+import Header from "../../components/Header.astro";
 import { ViewTransitions } from "astro:transitions";
-const headtype = "back";
 
+import '@fontsource-variable/cabin'
 const { title, frontmatter } = Astro.props;
 console.log(frontmatter);
+
 ---
 
 <!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={frontmatter ?  frontmatter.description : 'liste des projets'} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
@@ -19,9 +20,11 @@ console.log(frontmatter);
     <title>{title}</title>
   </head>
   <body>
-    <HeaderPro head={headtype} />
+    <Header type="projet" />
     <slot />
-  </body><style is:global>
+  </body><style is:global lang="scss">
+ 
+
     :root {
       --accent: 136, 58, 234;
       --accent-light: 224, 204, 250;
@@ -34,7 +37,7 @@ console.log(frontmatter);
       );
     }
     html {
-      font-family: system-ui, sans-serif;
+      font-family: 'Cabin Variable', sans-serif;
       background: #13151a;
       background-size: 224px;
     }
