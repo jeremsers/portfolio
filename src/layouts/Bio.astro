@@ -5,7 +5,7 @@ import profile from "../assets/profil.jpeg";
 
 <section>
   <h2>Bio</h2>
-  <div class="bio-container">
+  <div class="bio-container" id="bio">
     <article>
       <p>
         Bonjour, je suis Jeremy Sersoub. Je suis actuellement en reconversion
@@ -49,6 +49,8 @@ import profile from "../assets/profil.jpeg";
     padding: 100px 50px;
     border-top:2px solid $third;
     clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - 50px));
+    @include animate-section-r;
+
     
 
     & h2 {

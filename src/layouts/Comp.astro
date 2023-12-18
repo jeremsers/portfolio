@@ -10,7 +10,7 @@ import { Image, Picture } from "astro:assets";
 import ocint from '../assets/oc-int.avif'
 ---
 
-<section class="bio" id="bio">
+<section class="bio" id="comp">
   <h2>Competences</h2>
   <div class="bio-container">
     <div class="formation">
@@ -87,6 +87,10 @@ import ocint from '../assets/oc-int.avif'
     color: $text-prim;
     clip-path: polygon(0 50px,100% 0,100% 100%,0 calc(100% - 50px)); 
     margin-top: -40px;
+    @include animate-section-r;
+
+
+
     & h2 {
       @include title($second);
     }

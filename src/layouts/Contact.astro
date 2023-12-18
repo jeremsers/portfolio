@@ -15,12 +15,14 @@
     align-items: center;
     padding: 100px 0;
     background-color: $main;
+    min-height:65vh;
     /* background-image: url("../assets/contactbg.jpg");
   background-size: cover;
   background-repeat: no-repeat; */
     /* border-top: 2px solid grey; */
     clip-path: polygon(0 50px,100% 0,100% 100%,0 100%);
   margin-top: -40px;
+  @include animate-section-r;
     & a{
       display: flex;
       justify-content: center;

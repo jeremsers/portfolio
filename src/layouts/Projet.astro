@@ -48,6 +48,8 @@ import { Picture } from "astro:assets";
           mask: var(--mask); */
           clip-path: polygon(0 0,100% 50px,100% calc(100% - 50px),0 100%);
   margin-top: -40px;
+  @include animate-section-l;
+
   }
   .project h2 {
     @include title($main);

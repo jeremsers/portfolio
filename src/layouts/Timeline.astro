@@ -1,28 +1,49 @@
 ---
-import TimelineOdd from "../components/Timeline/TimelineOdd.astro";
-import TimelinePair from "../components/Timeline/TimelinePair.astro";
-const datacamp = 'https://www.datacamp.com/completed/statement-of-accomplishment/track/b549636e214d0771bdcb4710df8dcf3ca40569b3'
-const ml = 'https://www.coursera.org/account/accomplishments/specialization/5MJ7GGEH4QFC'
-const dl = 'https://www.coursera.org/account/accomplishments/specialization/2ARPB87BU7KF'
-
+import TimelineComp from "../components/TimelineComp.astro";
+const datacamp =
+  "https://www.datacamp.com/completed/statement-of-accomplishment/track/b549636e214d0771bdcb4710df8dcf3ca40569b3";
+const ml =
+  "https://www.coursera.org/account/accomplishments/specialization/5MJ7GGEH4QFC";
+const dl =
+  "https://www.coursera.org/account/accomplishments/specialization/2ARPB87BU7KF";
 ---
 
-
-<section class="design-section">
+<section class="design-section" id="timeline">
   <h2>Mon parcours</h2>
 
   <div class="timeline">
-    <TimelineOdd title="Formation Integrateur web" content="Openclassroom" />
-    <TimelinePair title="Formation Deep learning" content="Coursera" link={dl}/>
-    <TimelineOdd title="Formation Machine learning" content="Coursera" link={ml}/>
-    <TimelinePair
+    <TimelineComp
+      title="Formation Integrateur web"
+      content="Openclassroom"
+      year="Mars 2023 - Decembre 2023"
+      type="odd"
+    />
+    <TimelineComp
+      title="Formation Deep learning"
+      content="Coursera"
+      link={dl}
+      year="Novembre 2022 - Janvier 2023 "
+      type="pair"
+    />
+    <TimelineComp
+      title="Formation Machine learning"
+      content="Coursera"
+      link={ml}
+      year="Septembre 2022 - Novembre 2022"
+      type="odd"
+    />
+    <TimelineComp
       title="Formation Data scientist"
       content="Datacamp"
       link={datacamp}
+      year="Mars 2022 - Septembre 2022"
+      type="pair"
     />
-    <TimelineOdd
+    <TimelineComp
       title="M2 Droit prive"
       content="Université Toulouse I capitole"
+      year=" Septembre 2021"
+      type="odd"
     />
   </div>
 </section>
@@ -37,20 +58,21 @@ const dl = 'https://www.coursera.org/account/accomplishments/specialization/2ARP
     min-height: 60vh;
     padding: 100px 0;
     /* border-top: 2px solid grey; */
-   /*  --mask:
+    /*  --mask:
     radial-gradient(156.52px at 50% 210.00px,#000 99%,#0000 101%) calc(50% - 140px) 0/280px 51% repeat-x,
     radial-gradient(156.52px at 50% -140px,#0000 99%,#000 101%) 50% 70px/280px calc(51% - 70px) repeat-x,
     radial-gradient(156.52px at 50% calc(100% - 210.00px),#000 99%,#0000 101%) 50% 100%/280px 51% repeat-x,
     radial-gradient(156.52px at 50% calc(100% + 140.00px),#0000 99%,#000 101%) calc(50% - 140px) calc(100% - 70px)/280px calc(51% - 70px) repeat-x;
   -webkit-mask: var(--mask);
           mask: var(--mask); */
-          clip-path: polygon(0 0,100% 50px,100% calc(100% - 50px),0 100%);
-  margin-top: -40px;
-    & h2{
-      @include title($main)
+    clip-path: polygon(0 0, 100% 50px, 100% calc(100% - 50px), 0 100%);
+    margin-top: -40px;
+    @include animate-section-l;
+
+    & h2 {
+      @include title($main);
     }
   }
-
 
   .design {
     display: flex;
