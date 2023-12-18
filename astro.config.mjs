@@ -6,9 +6,6 @@ import vercel from "@astrojs/vercel/static";
 export default defineConfig({
   output: "static",
   adapter: vercel({
-    speedInsights: {
-      enabled: true,
-    },
   
     }),
     vite: {
@@ -23,10 +20,3 @@ export default defineConfig({
       },
     },
 });
-console.log(
-  process.env.VERCEL_ANALYTICS_ID,
-  process.env.PUBLIC_VERCEL_ANALYTICS_ID,
-);
-if (!process.env.VERCEL_ANALYTICS_ID) {
-  process.env.VERCEL_ANALYTICS_ID = process.env.PUBLIC_VERCEL_ANALYTICS_ID;
-}
