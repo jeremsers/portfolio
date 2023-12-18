@@ -6,13 +6,15 @@ import sass from "../assets/svg/sass.svg";
 import css from "../assets/svg/css.svg";
 import html from "../assets/svg/html.svg";
 import astro from "../assets/svg/astro.svg";
-import { Picture } from "astro:assets";
+import { Image, Picture } from "astro:assets";
+import ocint from '../assets/oc-int.avif'
 ---
 
 <section class="bio" id="bio">
   <h2>Competences</h2>
   <div class="bio-container">
     <div class="formation">
+      <Image class={'oclogo'} src={ocint} alt='formation integrateur web OpenClassroom'/>
       <article>
         <p>
           J'ai suivi durant l'année 2023 la formation OpenClassrooms
@@ -101,11 +103,28 @@ import { Picture } from "astro:assets";
   .formation {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     & article {
       font-size: clamp(12px, 4vw, 20px);
       letter-spacing: 1px;
       word-spacing: -1px;
       text-align: justify;
+      width: 50%;
+    }
+    & .oclogo {
+      width: 30%;
+      height: 30%;
+    }
+    @media screen and (max-width: 1023px) {
+      flex-direction: column;
+      & article {
+        width: 100%;
+      }
+      & .oclogo{
+        width: 80%;
+        height: 80%;
+      }
     }
   }
   .competence {
