@@ -5,7 +5,7 @@ import { Picture } from "astro:assets";
 ---
 
 <article class="project-card">
-  <a class="link" href={url}></a>
+  <a class="link" href={url} aria-label={title}></a>
   <div class="darken"></div>
   {(balise=='a') && 
   <Picture

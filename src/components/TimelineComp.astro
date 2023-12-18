@@ -8,7 +8,8 @@ const { title, content, link, year, type } = Astro.props;
       <h3>{title}</h3>
       <p>{content}</p>
       <p class="year year-odd">{year}</p>
-      <a class="link" href={link} target="_blank" rel="noopener noreferrer" />
+      {link && <a class="link" href={link} target="_blank" rel="noopener noreferrer" aria-label={title}/>}
+
     </div>
     <div class="timeline-middle">
     <div class="timeline-circle"></div>
@@ -29,7 +30,7 @@ const { title, content, link, year, type } = Astro.props;
       <h3>{title}</h3>
       <p>{content}</p>
       <p class="year year-pair">{year}</p>
-      <a class="link" href={link} target="_blank" rel="noopener noreferrer" />
+      {link && <a class="link" href={link} target="_blank" rel="noopener noreferrer" aria-label={title}/>}
     </div>
   )
 }
