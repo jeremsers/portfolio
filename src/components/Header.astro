@@ -4,7 +4,6 @@ const { type } = Astro.props;
 import logo from "../assets/bannerimg/logo.png";
 import { Icon } from "astro-icon";
 ---
-
 <header class="header">
   {
     type == "projet" && (
@@ -12,10 +11,10 @@ import { Icon } from "astro-icon";
         <a href="/#project">
           <Icon pack="ri" name="arrow-drop-left-line" />
           back
-        </a>
-      </div>
-    )
-  }
+          </a>
+          </div>
+          )
+        }
 
   {
     type == "base" && (
@@ -23,25 +22,29 @@ import { Icon } from "astro-icon";
         <a href="./">
           {" "}
           <Picture src={logo} alt="logo" />
-        </a>
-      </div>
-    )
-  }
+          </a>
+          </div>
+          )
+        }
   <nav class="navbar">
     <ul>
       <li>
-        <a href="./#project">Mes projets</a>
+        <a class='navlink' href="./#project">Mes projets</a>
       </li>
       <li>
-        <a href="./#comp">Competences</a>
+        <a class='navlink' href="./#comp">Competences</a>
       </li>
       <li>
-        <a href="./#contact">Contact</a>
+        <a class='navlink' href="./#contact">Contact</a>
       </li>
     </ul>
   </nav>
 </header>
 
+<script>
+  const select = document.querySelector('.navlink')
+  select?.classList.add('navlinkscrollsmooth') 
+</script>
 <style lang="scss">
   .header {
     display: flex;
@@ -50,8 +53,8 @@ import { Icon } from "astro-icon";
     align-items: center;
     background-color: rgba($third, 0.1);
     box-shadow:
-      0px 10px 13px -7px #000000,
-      5px 5px 15px 5px rgba(0, 0, 0, 0);
+    0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
     height: 8vh;
     width: 100vw;
     z-index: 100;
@@ -59,7 +62,7 @@ import { Icon } from "astro-icon";
     top: 0;
     transition: background-color 200ms;
     overflow-x: clip;
-
+    
     &:hover {
       background-color: $third;
       transition: background-color 200ms;

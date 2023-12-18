@@ -45,7 +45,9 @@ import '@fontsource-variable/cabin'
       background: $third;
       background-size: 224px;
       overflow-x: clip;
-      scroll-behavior: smooth;
+      &:has(.navlinkscrollsmooth){
+        scroll-behavior: smooth;
+      }
       
     }
     code {
