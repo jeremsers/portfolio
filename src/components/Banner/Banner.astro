@@ -1,5 +1,5 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
 import logo from "../../assets/bannerimg/logo.png";
 import "./banner.scss";
@@ -25,7 +25,7 @@ import "./banner.scss";
       <p>- Trouver une alternance</p>
     </div>
     <div class="logo-container">
-      <Picture class="logo" src={logo} alt="logo" />
+      <Image class="logo" src={logo} alt="logo" format="avif" />
     </div>
 
     <style lang="scss">
