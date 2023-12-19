@@ -6,7 +6,7 @@ img: '../../assets/covers/printit.png'
 imgAlt: 'printitjs'
 ---
 
-# Print it js
+
 
 Ce projet est normalement une simple introduction au langage JavaScript afin de mettre en place un carrousel. Cela m'a permis de découvrir comment récupérer un élément du DOM grâce à JavaScript pour ensuite le modifier. Mais j'ai profité de ce projet pour pousser un peu plus loin ce que j'avais appris des animations sur le projet précédent en décidant d'animer l'ensemble de la page afin de proposer un résultat plus moderne.
 

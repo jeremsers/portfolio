@@ -4,7 +4,10 @@
 
 <section class="contact" id="contact">
   <h2>Contact</h2>
-  <a class="contact-button" href="mailto:jerem.sers@gmail.com"> Contactez-moi </a>
+  <div class="link-container">
+
+    <a class="contact-button" href="mailto:contact@jsersoub.fr"> Contactez-moi </a>
+  </div>
 </section>
 
 
@@ -13,9 +16,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0;
+    justify-content: center;
+    padding: 100px 40px;
     background-color: $main;
     min-height:65vh;
+    gap: 100px;
     /* background-image: url("../assets/contactbg.jpg");
   background-size: cover;
   background-repeat: no-repeat; */
@@ -29,14 +34,29 @@
       align-items: center;
       width: 280px;
       height: 100px;
-      background-color: $third;
+      background-color: $second;
       text-decoration: none;
-      color: $second;
+      color: $third;
       border-radius: 10px;
       margin-bottom: 100px;
+      animation: icon-scale infinite 5000ms;
+      
     }
+    .link-container{
+      border-radius: 10px;
+      animation: icon-scale-shadow infinite 5000ms;
+
+      
+      width: 280px;
+      height: 100px;
+    }
+
+
     & h2 {
-      @include title($second)
+      @include title($second);
+      animation: rightShiftSec linear both;
+    animation-timeline: view();
+    animation-range: entry 55% cover 55% ;
     }
   }
  

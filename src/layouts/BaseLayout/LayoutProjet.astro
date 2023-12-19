@@ -1,5 +1,6 @@
 ---
 import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 
 import '@fontsource-variable/cabin'
@@ -22,6 +23,7 @@ console.log(frontmatter);
   <body>
     <Header type="projet" />
     <slot />
+    <Footer />
   </body><style is:global lang="scss">
  
 

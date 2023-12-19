@@ -16,7 +16,8 @@ const { Content } = await entry.render();
 ---
 
 <LayoutProjet title={entry.data.title} frontmatter={entry.data}>
-  <div class="pagecontainer">
+  <main class="pagecontainer">
+    <h1>{entry.data.title}</h1>
     <section class="projectpage">
       <Image
         transition:name=`animate-${entry.data.title}`
@@ -27,34 +28,46 @@ const { Content } = await entry.render();
         <Content />
       </article>
     </section>
-  </div>
+  </main>
 </LayoutProjet>
 
 <style lang="scss">
   
+h1{
+  @include title($main);
+  
+}
+
   .pagecontainer {
     background-color: $second;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 90vh;
+    justify-content:center;
+    align-items:center;
     padding: 100px 50px;
   }
   .projectpage {
-    margin-top: 30px;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 50px;
+    @media screen and (max-width:1600px) {
+      flex-direction: column;
+      align-items: center;
+    }
     
   }
   .projectpage img {
-    padding: 25px;
-    max-width: 50%;
-    object-fit: contain;
+    object-fit: cover;
+    padding: 5px;
+    height: 30%;
+    width: 70%;
+    background-color: $third;    
+    border-radius: 30px;
   }
   .projectpage p {
     padding: 25px;
+    
   }
 </style>

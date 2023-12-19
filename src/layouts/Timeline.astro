@@ -71,6 +71,9 @@ const dl =
 
     & h2 {
       @include title($main);
+      animation: leftShiftSec linear both;
+    animation-timeline: view();
+    animation-range: entry 75% cover 75% ;
     }
   }
 
@@ -88,6 +91,7 @@ const dl =
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    
   }
 
   .timeline-content {

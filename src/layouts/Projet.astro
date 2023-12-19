@@ -49,10 +49,20 @@ import { Picture } from "astro:assets";
           clip-path: polygon(0 0,100% 50px,100% calc(100% - 50px),0 100%);
   margin-top: -40px;
   @include animate-section-l;
+   & article{
+    animation: upShiftSec linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40% ;
+   }
+  
+
 
   }
   .project h2 {
     @include title($main);
+    animation: leftShiftSec linear both;
+    animation-timeline: view();
+    animation-range: entry 75% cover 75% ;
   }
   .project-container {
     box-sizing: border-box;
