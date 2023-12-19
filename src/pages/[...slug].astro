@@ -17,7 +17,7 @@ const { Content } = await entry.render();
 
 <LayoutProjet title={entry.data.title} frontmatter={entry.data}>
   <main class="pagecontainer">
-    <h1>{entry.data.title}</h1>
+    <h1 transition:name=`animate-title-${entry.data.title}`>{entry.data.title}</h1>
     <section class="projectpage">
       <Image
         transition:name=`animate-${entry.data.title}`
@@ -38,6 +38,9 @@ h1{
   @include title($main);
   
 }
+  article{
+    animation: leftShift forwards ease 400ms;
+  }
 
   .pagecontainer {
     background-color: $second;
