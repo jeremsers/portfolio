@@ -118,14 +118,17 @@ import ocint from '../assets/oc-int.avif'
       word-spacing: -1px;
       text-align: justify;
       width: 50%;
-      animation: rightShiftSec linear both;
-    animation-timeline: view();
-    animation-range: entry 40% cover 40% ;
+      & p {
+
+        animation: leftShiftSec linear both;
+      animation-timeline: view();
+      animation-range: entry 40% cover 40% ;
+      }
     }
     & .oclogo {
       width: 30%;
       height: 30%;
-      animation: leftShiftSec linear both;
+      animation: rightShiftSec linear both;
     animation-timeline: view();
     animation-range: entry 40% cover 40% ;
     }
