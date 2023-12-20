@@ -4,20 +4,33 @@ import { ViewTransitions } from "astro:transitions";
 
 const { title } = Astro.props;
 import Banner from "../../components/Banner/Banner.astro";
+import logo from '../../assets/bannerimg/logo.png'
+import { getImage } from "astro:assets";
 import '@fontsource-variable/cabin'
-
+import {SEOMetadata} from 'astro-seo-metadata'
+const imglogo = await getImage({src: logo, format: 'avif'})
 ---
 
 <!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="generator" content={Astro.generator} />
+    <SEOMetadata
+    siteName={title}
+    title={title}
+    description={'Portfolio de Jeremy Sersoub, Developpeur web en haute-savoie. Je recherche une alternance en Haute-savoie ou en télétravail'}
+    image={'../../assets/bannerimg/logo.avif'}
+    favicon={'/favicon.avif'}
+    author="Jeremy Sersoub"
+    copyright="ISC"
+    astroSitemap={true}
+    canonicalUrl={Astro.url.toString()}
+    type={'website'}
+    astroGenerator={true}
+    />
     <ViewTransitions />
-    <title>{title}</title>
+    
   </head>
   <body>
     <Header type='base' />

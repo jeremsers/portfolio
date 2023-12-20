@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import logo from "../../assets/bannerimg/logo.png";
+import logo from "../../assets/bannerimg/logo.avif";
 import "./banner.scss";
 ---
 
@@ -37,7 +37,7 @@ import "./banner.scss";
         background: white;
         width: 100%;
         justify-content: space-around;
-        background-image: url("../../assets/bannerimg/bgg.png");
+        background-image: url("../../assets/bannerimg/bgg.avif");
         overflow-x: clip;
         
         @media screen and (max-width: 765px) {
@@ -56,7 +56,7 @@ import "./banner.scss";
           margin-left: clamp(2px, 15vw, 250px);
 
           &:before {
-            background-image: url("../../assets/bannerimg/h1.png");
+            background-image: url("../../assets/bannerimg/h1.avif");
             background-size: $greenh-width $greenh-height;
             display: inline-block;
             background-repeat: no-repeat;
@@ -76,7 +76,7 @@ import "./banner.scss";
           color: transparent;
 
           &:after {
-            background-image: url("../../assets/bannerimg/h1slash.png");
+            background-image: url("../../assets/bannerimg/h1slash.avif");
             background-size: $greenh-width $greenh-height;
             display: inline-block;
             background-repeat: no-repeat;
@@ -95,7 +95,7 @@ import "./banner.scss";
           color: transparent;
 
           &:before {
-            background-image: url("../../assets/bannerimg/arrowtitre.png");
+            background-image: url("../../assets/bannerimg/arrowtitre.avif");
             background-size: clamp(160px, 20vw, 600px) clamp(60px, 6vw, 200px);
             display: inline-block;
             background-repeat: no-repeat;
@@ -121,7 +121,7 @@ import "./banner.scss";
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url("../../assets/bannerimg/postit.png");
+        background-image: url("../../assets/bannerimg/postit.avif");
         background-repeat: none;
         background-size: cover;
         height: clamp(150px, 30vw, 300px);
@@ -150,7 +150,7 @@ import "./banner.scss";
         justify-content: flex-end;
 
         &:before {
-          background-image: url("../../assets/bannerimg/arrowlogo.png");
+          background-image: url("../../assets/bannerimg/arrowlogo.avif");
           background-size: $logo-width $logo-height;
           display: inline-block;
           background-repeat: no-repeat;
