@@ -1,9 +1,18 @@
 ---
-
+import { Icon } from "astro-icon";
 ---
 
 <footer>
   <p>Jeremy Sersoub, 2023</p>
+  <a
+    class="githublink"
+    aria-label="lien vers repo github"
+    href="https://github.com/jeremsers/"
+    target="_blank"
+    rel="noopener noreferrer"
+    >
+    <Icon pack="mdi" name="github" />
+  </a>
 </footer>
 
 <style lang="scss">
@@ -14,5 +23,10 @@
     justify-content: center;
     height: 100px;
     align-items: center;
+  }
+  .githublink {
+    width: 30px;
+    margin-left: 10px;
+    color: $text-second;;
   }
 </style>
