@@ -6,7 +6,7 @@
   <h2>Contact</h2>
   <div class="contact-container">
     <div class="link-container">
-      <a class="contact-button" href="mailto:contact@jsersoub.fr">
+      <a class="contact-button" href="mailto:contact@jsersoub.fr" aria-hidden>
         Contactez-moi
       </a>
     </div>
@@ -24,20 +24,24 @@
     height: 65vh;
     clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
     margin-top: -40px;
-    @include animate-section-r;
+    /* @include animate-section-r; */
      &-container{
       display: flex;
       flex-direction: column;
       height: 100%;
       justify-content: center;
       align-items: center;
+      background-color: $main;
+      animation: leftShiftSec linear both;
+      animation-timeline: view();
+      animation-range: entry 25% cover 25%;
      }
     .link-container {
       border-radius: 10px;
       animation: icon-scale-shadow infinite 5000ms;
       width: 280px;
       height: 100px;
-      background-color: transparent;
+      background-color: $second;
     }
     
     & a {
@@ -50,7 +54,7 @@
       text-decoration: none;
       color: $third;
       border-radius: 10px;
-      margin-bottom: 100px;
+      
       animation: icon-scale infinite 5000ms;
       font-weight: bold;
     }
