@@ -8,6 +8,8 @@ const projetCollection = defineCollection({
         message: "Cover image must be at least 300 pixels wide!",
       }),
       description: z.string(),
+      link: z.string().optional(),
+      tags: z.array(z.string()),
     }),
 });
 
@@ -20,6 +22,7 @@ const projectlistCollection = defineCollection({
         message: "Cover image must be at least 300 pixels wide!",
       }),
       description: z.string(),
+      link: z.string().optional(),
     }),
 });
 

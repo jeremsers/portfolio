@@ -2,5 +2,6 @@
   "id": 7,
   "titre": "Nina Carducci",
   "description":"Optimisation SEO",
-  "image": "../../assets/covers/seo.png"
+  "image": "../../assets/covers/seo.png",
+  "link": "https://jeremsers.github.io/prjseo/"
 }

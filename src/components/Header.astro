@@ -29,20 +29,20 @@ import { Icon } from "astro-icon";
   <nav class="navbar">
     <ul>
       <li>
-        <a class='navlink' href="./#project">Mes projets</a>
+        <a class='navlink' href={type=='projet' ? '../#project' : './#project'}>Mes projets</a>
       </li>
       <li>
-        <a class='navlink' href="./#comp">Competences</a>
+        <a class='navlink' href={type=='projet' ? '../#comp' : './#comp'}>Competences</a>
       </li>
       <li>
-        <a class='navlink' href="./#contact">Contact</a>
+        <a class='navlink' href={type=='projet' ? '../#contact' : './#contact'}>Contact</a>
       </li>
     </ul>
   </nav>
 </header>
 
 <script>
-  
+
 document.addEventListener('astro:page-load', () => {
   const select = document.querySelector('.navlink')
   select?.classList.add('navlinkscrollsmooth') 
@@ -110,7 +110,9 @@ document.addEventListener('astro:page-load', () => {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 25px;
+    margin: 0;
     margin-right: 50px;
   }
   .navbar ul li {

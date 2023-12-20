@@ -1,9 +1,10 @@
 ---
 title: Print it js
-tags: [Html, css, javascript, animation]
+tags: [Html / Css, Javascript, Animation]
 description: Site vitrine avec réalisation d'animation grace a css et js
 img: '../../assets/covers/printit.png'
 imgAlt: 'printitjs'
+link: https://jeremsers.github.io/Print-it-JS/
 ---
 
 

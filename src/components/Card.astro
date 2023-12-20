@@ -1,35 +1,42 @@
 ---
-const { url, title, desc, img, balise } = Astro.props;
+const { tags ,url, title, desc, img, balise } = Astro.props;
 import { Picture } from "astro:assets";
-
 ---
 
 <article class="project-card">
-  <a class="link" href={url} aria-label={title}></a>
+  {balise == "a" && <a class="link" href={url} aria-label={title} />}
+  {
+    balise == "b" && (
+      <a
+        class="link"
+        href={url}
+        aria-label={title}
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    )
+  }
+
   <div class="darken"></div>
-  {(balise=='a') && 
+
   <Picture
     transition:name=`animate-${title}`
     src={img}
     alt=`projet ${title} `
     quality={70}
-    densities={[1.5,2]}
+    densities={[1.5, 2]}
     format="avif"
-    
-  /> }
- {(balise=='b') && 
- <img 
- transition:name=`animate-${title}`
-  src=`../src/assets/${img}`
-  alt=`projet ${title} `>
-}
+  />
 
-<div class="project-card--text">
-  <h3 transition:name=`animate-title-${title}`>{title}</h3>
-  <p>{desc}</p>
+  <div class="project-card--text">
+    <h3>{title}</h3>
+    <p>{desc}</p>
+    {tags && <ul class="taglist">
+      {tags.map((tag) => (<li>{tag}</li>))}
+    </ul>}
   </div>
-  </article>
-  
+</article>
+
 <style lang="scss">
   .darken {
     background-color: rgba(0, 0, 0, 0.5);
@@ -55,20 +62,24 @@ import { Picture } from "astro:assets";
     outline: #43d590 dashed 2px;
     outline-offset: 15px;
     box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.99);
-    transition: transform 500ms, box-shadow 500ms, outline-offset 500ms;
+    transition:
+      transform 500ms,
+      box-shadow 500ms,
+      outline-offset 500ms;
     display: flex;
     align-items: center;
     animation: upShiftSec linear both;
     animation-timeline: view();
-    animation-range: entry 30% cover 30% ;
-    
+    animation-range: entry 30% cover 30%;
 
-    &:hover{
+    &:hover {
       transform: scale(1.05);
       box-shadow: 11px 11px 0px 0px rgba(0, 0, 0, 0.99);
-      transition: transform 500ms, box-shadow 500ms, outline-offset 500ms;
+      transition:
+        transform 500ms,
+        box-shadow 500ms,
+        outline-offset 500ms;
       outline-offset: 18px;
-
     }
   }
   .project-card--text {
@@ -76,12 +87,16 @@ import { Picture } from "astro:assets";
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
+    height: 100%;
     width: 100%;
     z-index: 3;
     opacity: 0.01;
-    font-size: clamp(12px,2vw,16px);
+    font-size: clamp(12px, 2vw, 16px);
+    & h3, p {
+      margin: 0;
+    }
   }
   .project-card img {
     position: absolute;
@@ -100,5 +115,24 @@ import { Picture } from "astro:assets";
     left: 0;
     right: 0;
     z-index: 100;
+  }
+  .taglist{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    padding: 0;
+    margin:0;
+   
+    
+    & li {
+      list-style: none;
+      background-color: $third;
+      border-radius:10px;
+      color: $text-second;
+      padding: 5px 10px;
+    }
+
   }
 </style>

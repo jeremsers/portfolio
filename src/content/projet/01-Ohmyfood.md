@@ -1,10 +1,10 @@
 --- 
 title: OhmyFood
-tags : [Html,Css,Animation]
+tags : [Html/Css,Animation]
 description: Animation css d'un site de menu en ligne
 img: ../../assets/covers/ohmyfood.png
-imgAlt: 'oh my food'
-
+imgAlt: 'oh my food website'
+link: https://jeremsers.github.io/OhMyFood/
 ---
 
 

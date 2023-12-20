@@ -3,7 +3,8 @@ title: Kasa
 tags: [React]
 description: Site de location immobilière realise avec React
 img: '../../assets/covers/kasa.png'
-imgAlt: 'printitjs'
+imgAlt: 'kasa website'
+link: https://kasa-eight-mu.vercel.app/
 ---
 
 

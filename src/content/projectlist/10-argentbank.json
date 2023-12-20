@@ -2,5 +2,6 @@
   "id": 9,
   "titre": "Argentbank",
   "description": "SPA React avec gestion de state global via redux",
-  "image": "../../assets/covers/argbank.png"
+  "image": "../../assets/covers/argbank.png",
+  "link": "https://github.com/jeremsers/argentbank"
 }

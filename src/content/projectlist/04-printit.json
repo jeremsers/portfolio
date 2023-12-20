@@ -2,5 +2,6 @@
   "id": 3,
   "titre": "Print it js",
   "description":"Animation",
-  "image": "../../assets/covers/printit.png"
+  "image": "../../assets/covers/printit.png",
+  "link": "https://jeremsers.github.io/Print-it-JS/"
 }

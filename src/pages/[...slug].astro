@@ -17,14 +17,22 @@ const { Content } = await entry.render();
 
 <LayoutProjet title={entry.data.title} frontmatter={entry.data}>
   <main class="pagecontainer">
-    <h1 transition:name=`animate-title-${entry.data.title}`>{entry.data.title}</h1>
+    <div class="title-container">
+      <h1>{entry.data.title}</h1>
+      <ul class="taglist">
+        {entry.data.tags.map((tag) => (<li>{tag}</li>))}
+      </ul>
+    </div>
     <section class="projectpage">
-      <Image
-        transition:name=`animate-${entry.data.title}`
-        src={entry.data.img}
-        alt={entry.data.title}
-        format="avif"
-      />
+      <div class="img-container">
+        <a class="linkimg" href={entry.data.link} aria-label={entry.data.title} target="_blank" rel="noopener noreferrer" ></a>
+        <Image
+          transition:name=`animate-${entry.data.title}`
+          src={entry.data.img}
+          alt={entry.data.title}
+          format="avif"
+        />
+      </div>
       <article>
         <Content />
       </article>
@@ -36,6 +44,7 @@ const { Content } = await entry.render();
   
 h1{
   @include title($main);
+  animation: upShift forwards ease 400ms;
   
 }
   article{
@@ -49,6 +58,7 @@ h1{
     justify-content:center;
     align-items:center;
     padding: 100px 50px;
+    min-height:90vh;
   }
   .projectpage {
     display: flex;
@@ -62,16 +72,64 @@ h1{
     }
     
   }
-  .projectpage img {
-    object-fit: cover;
+  .img-container {
+    position: relative;
     padding: 5px;
-    height: 30%;
     width: 70%;
     background-color: $third;    
     border-radius: 30px;
-  }
-  .projectpage p {
-    padding: 25px;
+    display:flex;
+    flex-shrink: 0;
     
+    & img {
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+    border-radius: 30px;
+      
+    }
+  }
+  .projectpage article {
+   
+    padding: 25px;
+
+    
+  }
+  .linkimg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  .title-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .taglist{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+    padding: 0;
+    margin: 50px 0;
+   
+    
+    & li {
+      list-style: none;
+      background-color: $third;
+      border-radius:10px;
+      color: $text-second;
+      padding: 5px 10px;
+      font-size: clamp(12px, 2vw, 16px);
+
+    }
+
   }
 </style>

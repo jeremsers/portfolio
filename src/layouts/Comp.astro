@@ -10,9 +10,9 @@ import { Image, Picture } from "astro:assets";
 import ocint from '../assets/oc-int.avif'
 ---
 
-<section class="bio" id="comp">
+<section class="comp" id="comp">
   <h2>Competences</h2>
-  <div class="bio-container">
+  <div class="comp-container">
     <div class="formation">
       <Image class={'oclogo'} src={ocint} alt='formation integrateur web OpenClassroom' format="avif"/>
       <article>
@@ -70,7 +70,7 @@ import ocint from '../assets/oc-int.avif'
 </section>
 
 <style lang="scss">
-  .bio {
+  .comp {
     display: flex;
     flex-direction: column;
     /* background-image: url("../assets/contactbg.jpg");
@@ -118,12 +118,10 @@ import ocint from '../assets/oc-int.avif'
       word-spacing: -1px;
       text-align: justify;
       width: 50%;
-      & p {
-
-        animation: leftShiftSec linear both;
-      animation-timeline: view();
-      animation-range: entry 40% cover 40% ;
-      }
+      animation: leftShiftSec linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40% ;
+     
     }
     & .oclogo {
       width: 30%;
@@ -159,7 +157,7 @@ import ocint from '../assets/oc-int.avif'
     height: 100px;
     width: 100px;
     padding: 5px;
-    background-color: rgba($text-prim, 0.99);
+    background-color: rgba($text-second, 0.99);
     border-radius: 30px;
     animation: upShiftSec linear both;
     animation-timeline: view();

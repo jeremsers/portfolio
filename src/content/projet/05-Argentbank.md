@@ -3,7 +3,8 @@ title: Argentbank
 tags : [React, Redux]
 description: Gestion d'un state global grace a Redux
 img: '../../assets/covers/argbank.png'
-imgAlt: 'printitjs'
+imgAlt: 'Argentbank website'
+link: https://github.com/jeremsers/argentbank
 ---
 
 

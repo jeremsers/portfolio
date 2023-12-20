@@ -2,5 +2,6 @@
   "id": 4,
   "titre": "Sophie Buel - Architecte d'intérieur",
   "description": "javascript gestion operation CRUD",
-  "image":"../../assets/covers/sbuel.png"
+  "image":"../../assets/covers/sbuel.png",
+  "link":"https://github.com/jeremsers/Portfolio-architecte-sophie-bluel"
 }

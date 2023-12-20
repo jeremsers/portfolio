@@ -4,31 +4,43 @@
 
 <section class="contact" id="contact">
   <h2>Contact</h2>
-  <div class="link-container">
-
-    <a class="contact-button" href="mailto:contact@jsersoub.fr"> Contactez-moi </a>
-  </div>
+  <div class="contact-container">
+    <div class="link-container">
+      <a class="contact-button" href="mailto:contact@jsersoub.fr">
+        Contactez-moi
+      </a>
+    </div>
+    </div>
 </section>
-
 
 <style lang="scss">
   .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 100px 40px;
     background-color: $main;
-    min-height:65vh;
-    gap: 100px;
-    /* background-image: url("../assets/contactbg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; */
-    /* border-top: 2px solid grey; */
-    clip-path: polygon(0 50px,100% 0,100% 100%,0 100%);
-  margin-top: -40px;
-  @include animate-section-r;
-    & a{
+    height: 65vh;
+    clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+    margin-top: -40px;
+    @include animate-section-r;
+     &-container{
+      display: flex;
+      flex-direction: column;
+      
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+     }
+    .link-container {
+      border-radius: 10px;
+      animation: icon-scale-shadow infinite 5000ms;
+      width: 280px;
+      height: 100px;
+    }
+    
+    & a {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -41,24 +53,12 @@
       margin-bottom: 100px;
       animation: icon-scale infinite 5000ms;
       font-weight: bold;
-      
     }
-    .link-container{
-      border-radius: 10px;
-      animation: icon-scale-shadow infinite 5000ms;
-
-      
-      width: 280px;
-      height: 100px;
-    }
-
-
     & h2 {
       @include title($second);
       animation: rightShiftSec linear both;
-    animation-timeline: view();
-    animation-range: entry 55% cover 55% ;
+      animation-timeline: view();
+      animation-range: entry 55% cover 55%;
     }
   }
- 
 </style>

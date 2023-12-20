@@ -2,5 +2,6 @@
     "id": 0,
     "titre": "Riding cities",
     "description":"html/css",
-    "image": "../../assets/covers/ridingcities.png"
+    "image": "../../assets/covers/ridingcities.png",
+    "link":"https://jeremsers.github.io/riding-cities/"
   }

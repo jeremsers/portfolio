@@ -1,9 +1,10 @@
 --- 
 title: Sophie Buel - Architecte d'intérieur  
-tags : [Html,css,js]
+tags : [Html / Css, Javascript]
 description: Site vitrine avec gestion de login et operations CRUD grace a js
 img: '../../assets/covers/sbuel.png'
-imgAlt: 'printitjs'
+imgAlt: Sophie Buel - Architecte d'intérieur 
+link: https://github.com/jeremsers/Portfolio-architecte-sophie-bluel
 ---
 
 
