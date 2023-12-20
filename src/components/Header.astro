@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 const { type } = Astro.props;
-import logo from "../assets/bannerimg/logo.png";
+import logo from "../assets/bannerimg/logo.avif";
 import { Icon } from "astro-icon";
 ---
 <header class={type=='projet' ? 'header' : 'header header-home'} >
@@ -42,8 +42,13 @@ import { Icon } from "astro-icon";
 </header>
 
 <script>
+  
+document.addEventListener('astro:page-load', () => {
   const select = document.querySelector('.navlink')
   select?.classList.add('navlinkscrollsmooth') 
+  });
+
+
 </script>
 <style lang="scss">
   .header {
@@ -78,7 +83,7 @@ import { Icon } from "astro-icon";
 
     & a {
       display: flex;
-      color: $text-prim;
+      color: $text-second;
       text-decoration: none;
       align-items: center;
     font-size: clamp(12px,2vw,16px);
@@ -97,7 +102,7 @@ import { Icon } from "astro-icon";
     }
   }
   .logohead a {
-    color: $text-prim;
+    color: $text-second;
     text-decoration: none;
   }
 
@@ -114,7 +119,7 @@ import { Icon } from "astro-icon";
 
   }
   .navbar ul li a {
-    color: $text-prim;
+    color: $text-second;
     text-decoration: none;
     text-shadow:
       1px 0 black,

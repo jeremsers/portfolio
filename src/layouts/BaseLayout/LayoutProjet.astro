@@ -2,7 +2,7 @@
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
-
+import {SEOMetadata} from 'astro-seo-metadata'
 import '@fontsource-variable/cabin'
 const { title, frontmatter } = Astro.props;
 console.log(frontmatter);
@@ -13,10 +13,20 @@ console.log(frontmatter);
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={frontmatter ?  frontmatter.description : 'liste des projets'} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="generator" content={Astro.generator} />
+    <SEOMetadata
+    siteName={title}
+    title={title}
+    description={frontmatter ?  frontmatter.description : 'liste des projets'}
+    image={'/favicon.avif'}
+    favicon={'/favicon.avif'}
+    author="Jeremy Sersoub"
+    copyright="ISC"
+    astroSitemap={true}
+    canonicalUrl={Astro.url.toString()}
+    type={'website'}
+    astroGenerator={true}
+    />
     <ViewTransitions />
     <title>{title}</title>
   </head>

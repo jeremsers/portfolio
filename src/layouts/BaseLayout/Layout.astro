@@ -4,11 +4,10 @@ import { ViewTransitions } from "astro:transitions";
 
 const { title } = Astro.props;
 import Banner from "../../components/Banner/Banner.astro";
-import logo from '../../assets/bannerimg/logo.png'
-import { getImage } from "astro:assets";
+
 import '@fontsource-variable/cabin'
 import {SEOMetadata} from 'astro-seo-metadata'
-const imglogo = await getImage({src: logo, format: 'avif'})
+
 ---
 
 <!doctype html>
@@ -20,7 +19,7 @@ const imglogo = await getImage({src: logo, format: 'avif'})
     siteName={title}
     title={title}
     description={'Portfolio de Jeremy Sersoub, Developpeur web en haute-savoie. Je recherche une alternance en Haute-savoie ou en télétravail'}
-    image={'../../assets/bannerimg/logo.avif'}
+    image={'/favicon.avif'}
     favicon={'/favicon.avif'}
     author="Jeremy Sersoub"
     copyright="ISC"
